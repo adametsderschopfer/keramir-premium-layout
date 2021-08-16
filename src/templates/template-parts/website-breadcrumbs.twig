@@ -1,0 +1,18 @@
+<div class="breadcrumbs">
+    <div class="container-min breadcrumbs-container">
+        {% for crumb in crumbs %}
+            <a
+                    {% if not loop.first %}
+                        href="/"
+                    {% endif %}
+
+                    class="breadcrumbs__link">
+                <span>{{ crumb }}</span>
+            </a>
+
+            {% if not loop.last %}
+                <span>/</span>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
