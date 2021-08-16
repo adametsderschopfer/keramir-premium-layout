@@ -1,0 +1,14 @@
+<div class="input__wrapper">
+    <input class="input {% if class %} {{ class }} {% endif %}" {% if type %} type="{{ type }}" {% endif %} checked
+            {% if placeholder %} placeholder="{{ placeholder }}" {% endif %}
+            {% for d in data %}
+           {{ d[0] }}="{{ d[1] }}"
+            {% endfor %}
+    />
+
+    {% if testError %}
+        <div class="be-error-message">
+            Имя не может состоять из одной буквы
+        </div>
+    {% endif %}
+</div>

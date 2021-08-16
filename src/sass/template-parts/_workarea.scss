@@ -1,0 +1,5 @@
+.website-workarea {
+  @include bp-tablet() {
+    padding-top: 5rem;
+  }
+}

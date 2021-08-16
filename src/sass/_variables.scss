@@ -1,0 +1,73 @@
+$color-dark: #1e1e1e;
+$color-dark-light: #424242;
+$color-fuxia: #ff005c;
+$color-gray: #a0a0a0;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-attention: #cb2222;
+$color-yellow: #ebb500;
+$color-green: #0eb461;
+
+$basic : (
+  primary: #343434,
+  main: #000000,
+);
+
+$gray : (
+  color_c4: #c4c4c4
+);
+
+$container-width: 1815px;
+$container-fluid-width: 1440px;
+
+$tablet-width: 768px;
+$desktop-width: $container-width - 1px;
+
+$font1: "GothamPro", "Arial", sans-serif;
+$font2: "Antiqua", "Arial", sans-serif;
+
+/* TYPOGRAPHY */
+$font-sizes: (
+  paragraph-1: 1.6rem,
+  paragraph-2: 1.4rem,
+  head-11: 1.2rem,
+  head-12: 2rem,
+  head-13: 2.5rem,
+  head-14: 2.5rem,
+  head-21: 3em,
+  head-22: 2.5rem,
+  head-23: 1.6rem,
+);
+$line-heights: (
+  paragraph-1: 2.2rem,
+  paragraph-2: 2rem,
+  head-11: 1.6rem,
+  head-12: 2.8rem,
+  head-13: 3.5rem,
+  head-14: 3.5rem,
+  head-21: 4rem,
+  head-22: 3.5rem,
+  head-23: 2.2rem,
+);
+$font-weights: (
+  paragraph-1: 400,
+  paragraph-2: 400,
+  head-11: 400,
+  head-12: 400,
+  head-13: 400,
+  head-14: 400,
+  head-21: 400,
+  head-22: 400,
+  head-23: 400,
+);
+
+/* Breakpoints */
+$break-points: (
+  desktophd: 1450px,
+  desktop: 1285px,
+  desktopxs: 1199px,
+  tablet: 991px,
+  tabletxs: 767px,
+  mobile: 599px,
+  mobilexs: 359px
+);

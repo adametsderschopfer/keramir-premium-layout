@@ -1,0 +1,39 @@
+{% if href %}
+    <a href="{{ href }}" class="button-primary
+        {% if colorClass %} button-primary_{{ colorClass }} {% endif %}
+        {% if class %} {{ class }} {% endif %}"
+
+            {% if data %} {{ data }} {% endif %}
+
+            {% if type %} type="{{ type }}" {% endif %}>
+        {{ text }}
+
+        {% if svg %}
+            {{ svg }}
+        {% endif %}
+    </a>
+{% else %}
+    {% if type == "submit" %}
+        <input type="submit"  class="button-primary
+        {% if colorClass %} button-primary_{{ colorClass }} {% endif %}
+        {% if class %} {{ class }} {% endif %}"
+
+                {% if data %} {{ data }} {% endif %}
+
+                {% if type %} type="{{ type }}" {% endif %} value=" {{ text }}">
+    {% else %}
+        <button class="button-primary
+        {% if colorClass %} button-primary_{{ colorClass }} {% endif %}
+        {% if class %} {{ class }} {% endif %}"
+
+                {% if data %} {{ data }} {% endif %}
+
+                {% if type %} type="{{ type }}" {% endif %}>
+            {{ text }}
+
+            {% if svg %}
+                {{ svg }}
+            {% endif %}
+        </button>
+    {% endif %}
+{% endif %}

@@ -1,0 +1,291 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a:not(.button-primary) {
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: $font1;
+  background-color: #f8fbff;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.default-indent {
+  margin-bottom: 10rem;
+
+  @include bp-tablet() {
+    margin-bottom: 6rem;
+  }
+}
+
+.default-title {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+  font-weight: bold;
+
+  &_indent {
+    margin-bottom: 5rem;
+
+    @include bp-tablet() {
+      margin-bottom: 3rem;
+    }
+  }
+
+  @include bp-tablet() {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+.scroll-x {
+  &_mobile {
+    @include bp-tablet() {
+      overflow-x: auto;
+      overflow-y: hidden;
+
+      > div {
+        &:last-of-type {
+          position: relative;
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -2rem;
+            width: 2rem;
+            height: 1px;
+          }
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.loader {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+
+  transition: 0.3s;
+
+  &_hide {
+    opacity: 0;
+  }
+}
+
+.hidden {
+  display: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+  touch-action: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+textarea:focus,
+input:focus,
+button {
+  outline: none;
+  appearance: none;
+  box-shadow: none !important;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: $container-width;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.container-min {
+  width: 100%;
+  min-width: 320px;
+  margin: auto;
+  padding: 0 2rem;
+
+  max-width: 1526px;
+}
+
+.visible-m {
+  @include bp-tablet(min) {
+    display: none !important;
+  }
+
+  @include bp-tablet() {
+    display: block;
+  }
+}
+
+.visible-d {
+  @include bp-tablet(min) {
+    display: block;
+  }
+
+  @include bp-tablet() {
+    display: none !important;
+  }
+}
+
+.flex {
+  display: flex;
+
+  &_v {
+    &-center {
+      align-items: center;
+    }
+
+    &-start {
+      align-items: flex-start;
+    }
+
+    &-end {
+      align-items: flex-end;
+    }
+  }
+
+  &_h {
+    &-center {
+      justify-content: center;
+    }
+
+    &-between {
+      justify-content: space-between;
+    }
+  }
+}
+
+.flex-grow {
+  &_top {
+    margin-top: auto;
+  }
+}
+
+.flex-double {
+  min-width: calc(50% - 1.5rem);
+  max-width: calc(50% - 1.5rem);
+
+  @include bp-tablet() {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.anchor-scroll {
+  position: relative;
+  top: -11rem;
+
+  @include bp-tablet() {
+    top: -6rem;
+  }
+}
+
+.ps__rail-y {
+  position: absolute;
+  right: 0;
+  left: auto !important;
+  width: 0.3rem;
+  background-color: transparent;
+  border-radius: 1rem;
+  z-index: 3;
+}
+
+.ps__thumb-y {
+  position: absolute;
+  width: 100%;
+  background-color: map_get($gray, color_ff);
+  border-radius: 0.3rem;
+}
+
+.sticky-block {
+  position: sticky;
+  top: 7rem;
+}
+
+img,
+svg {
+  user-select: none;
+}
+
+label span {
+  user-select: none;
+}
+
+.dashed-text span {
+  background-image: linear-gradient(to right, map_get($gray, color_a8) 75%, transparent 75%);
+  background-position: 0 1.29em;
+  background-repeat: repeat-x;
+  background-size: 0.8rem 0.1rem;
+}

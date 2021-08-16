@@ -1,0 +1,128 @@
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Define vertical, horizontal, or both position
+@mixin center($position) {
+  position: absolute;
+
+  @if $position == "vertical" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @else if $position == "horizontal" {
+    left: 50%;
+    transform: translate(-50%);
+  }
+
+  @else if $position == "both" {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// External fonts
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    font-display: fallback;
+    src: url($file-name + ".eot");
+    src: url($file-name + ".woff") format("woff"),
+      url($file-name + ".ttf") format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin font-prop($font-style) {
+  font-size: map-get($font-sizes, $font-style);
+  line-height: map-get($line-heights, $font-style);
+  font-weight: map-get($font-weights, $font-style);
+}
+
+// Placeholders
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+// Adaptive mixins
+@mixin mediaMax($mediaWidth) {
+  @media only screen and (max-width: $mediaWidth - 1) {
+    @content;
+  }
+}
+
+@mixin mediaMin($mediaWidth) {
+  @media only screen and (min-width: $mediaWidth) {
+    @content;
+  }
+}
+
+@mixin mediaDistance($mediaWidthMin, $mediaWidthMax) {
+  @media only screen and (min-width: $mediaWidthMin) and (max-width: $mediaWidthMax - 1) {
+    @content;
+  }
+}
+
+@mixin bp-desktopHD($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, desktophd)) {
+    @content;
+  }
+}
+
+@mixin bp-desktop($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, desktop)) {
+    @content;
+  }
+}
+
+@mixin bp-desktopXS($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, desktopxs)) {
+    @content;
+  }
+}
+
+@mixin bp-tablet($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, tablet)) {
+    @content;
+  }
+}
+
+@mixin bp-tabletXS($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, tabletxs)) {
+    @content;
+  }
+}
+
+@mixin bp-mobile($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, mobile)) {
+    @content;
+  }
+}
+
+@mixin bp-mobileXS($type: "max") {
+  @media only screen and (#{$type}-width: map-get($break-points, mobilexs)) {
+    @content;
+  }
+}
