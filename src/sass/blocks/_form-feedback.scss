@@ -27,9 +27,11 @@
 }
 
 .form-feedback__submit {
-  margin-top: 13.1rem;
+  margin-top: 14.5rem;
   margin-right: auto;
   margin-left: auto;
+  font-family: $font1;
+  font-weight: 300;
 }
 
 .form-feedback__fields {
@@ -38,7 +40,7 @@
   width: 100%;
 
   .textarea__cover {
-    width: 100%;
+    width: 58.5rem;
   }
 
   .input__cover {
@@ -76,4 +78,3 @@
 .form-feedback__form-checkbox {
   margin-top: 5.4rem;
 }
-

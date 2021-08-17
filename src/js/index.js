@@ -94,3 +94,35 @@ function chunk(arr, len) {
     document.addEventListener('DOMContentLoaded', () => PhoneMaskInit());
     window.PhoneMask = {init: PhoneMaskInit}
 })();
+
+;(() => {
+
+    document.addEventListener('DOMContentLoaded', () => {
+        legancyPopupInit({
+            paddingRightElements: ['.wh']
+        });
+
+       const formFeedbackPopup = document.querySelector('.js-form-feedback');
+       const btns = document.querySelectorAll('[data-popup="form-feedback"]');
+
+       if (formFeedbackPopup) {
+           const ffPopup = legancyPopup({
+               content: formFeedbackPopup,
+               title: false,
+               close: false,
+               onAfterAppend(result) {
+                   formFeedbackPopup.remove();
+               }
+           });
+
+           if (btns.length) {
+               for (const btn of btns) {
+                   btn.addEventListener('click', () => {
+                       ffPopup.open();
+                   });
+               }
+           }
+       }
+    });
+
+})();

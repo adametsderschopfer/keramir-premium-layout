@@ -22,6 +22,11 @@
   &.catalog_last {
     margin-right: auto;
     margin-left: 4.3rem;
+
+    @include bp-tablet() {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   &.catalog__item-wide {

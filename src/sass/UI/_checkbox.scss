@@ -77,7 +77,11 @@ a.checkbox__link {
   position: absolute;
   left: 4.1rem;
   top: calc(100% + 1rem);
-  border-bottom: 1px solid map_get($basic, primary);
+  display: inline;
+
+  span {
+    border-bottom: 1px solid map_get($basic, primary);
+  }
 
   &:hover {
     text-decoration: none;
