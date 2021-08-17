@@ -1,0 +1,79 @@
+.form-feedback-indent {
+  margin: 16rem 0;
+}
+
+.form-feedback {
+  max-width: 90.8rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.form-feedback__title {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+  margin-bottom: 3.5rem;
+  text-transform: uppercase;
+}
+
+.form-feedback__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.form-feedback__submit {
+  margin-top: 13.1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-feedback__fields {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .textarea__cover {
+    width: 100%;
+  }
+
+  .input__cover {
+    width: 27rem;
+  }
+
+  @include bp-mobile() {
+    flex-direction: column;
+
+    .input__cover {
+      width: 100%;
+    }
+
+    .textarea__cover {
+      width: 100%;
+      margin-top: 6.2rem;
+    }
+  }
+}
+
+.form-feedback__inps {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5.3rem;
+
+  & > .input__cover:not(:first-of-type) {
+    margin-top: 6.2rem;
+  }
+
+  @include bp-mobile() {
+    margin-right: 0;
+  }
+}
+
+.form-feedback__form-checkbox {
+  margin-top: 5.4rem;
+}
+

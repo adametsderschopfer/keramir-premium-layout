@@ -1,0 +1,96 @@
+<div class="default-banner {{ isSlider ? "default-banner_slider" }}"
+     style="background-image: url('./assets/images/default-banner.png');">
+    {% if not isNothing %}
+        <div class="default-banner__content">
+            {% if isCatalog %}
+                <div class="default-banner__text">
+                    <div class="default-banner__title">Каталог</div>
+                    <div class="default-banner__descr">Лид — аннотация, «шапка» статьи, новости или пресс-релиза.
+                        <br/>Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
+                        раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
+                    </div>
+                </div>
+            {% endif %}
+
+            {% if isSlider %}
+                <div class="default-banner__slider js-banner-slider">
+                    <button class="default-banner__slider-toggle js-banner-slider-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="61" height="29" viewBox="0 0 61 29" fill="none">
+                            <path d="M30.5 29C30.04 29 29.5799 28.8233 29.2349 28.5582L0.368182 2.05008C-0.206852 1.51992 -0.0918457 0.724678 0.598196 0.282876C1.28824 -0.158926 2.3233 -0.0705655 2.89834 0.459597L30.5 25.819L58.1017 0.459597C58.6767 -0.0705655 59.7118 -0.158926 60.4018 0.282876C61.0918 0.724678 61.2069 1.51992 60.6318 2.05008L31.7651 28.5582C31.4201 28.8233 30.96 29 30.5 29Z"
+                                  fill="white"/>
+                        </svg>
+                    </button>
+
+                    <div class="default-banner__slider-content js-banner-slider-content">
+                        <div class="container-min">
+                            <div class="js-banner-slider-swiper default-banner__slider-swiper">
+                                <div class="swiper-wrapper">
+                                    {% for i in [1,2,3,4,1,2,3,4,1,2,3] %}
+                                        <a href="javascript:void(0);" class="swiper-slide default-banner__slide">
+                                            <div class="default-banner__slide-img">
+                                                <img  src="./assets/images/slide-{{ i }}.png" alt="">
+                                            </div>
+
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
+
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection
+                                            </div>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="swiper-nav">
+                            <div class="swiper-nav__prev"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
+                                    <g filter="url(#filter0_i)">
+                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"/>
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+                                        </filter>
+                                    </defs>
+                                </svg></div>
+                            <div class="swiper-nav__next">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
+                                    <g filter="url(#filter0_i)">
+                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"/>
+                                    </g>
+                                    <defs>
+                                        <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                            <feOffset dy="4"/>
+                                            <feGaussianBlur stdDeviation="2"/>
+                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+                                        </filter>
+                                    </defs>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="default-banner__mouse">
+        <img src="./assets/images/mouse-banner.png" alt="">
+    </div>
+</div>

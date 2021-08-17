@@ -13,7 +13,7 @@
           const ps = new PerfectScrollbar(dropdown, {
             wheelPropagation: false,
           });
-          dropdown.style.height = '200px';
+          dropdown.style.height = dropdown.scrollHeight + 'px';
           dropdown.style.overflow = 'hidden';
         }
 

@@ -1,6 +1,7 @@
 .checkbox {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 .checkbox__input {
@@ -12,9 +13,18 @@
     }
   }
 
+  &:not(:checked) {
+    & + .checkbox__clone {
+      svg {
+        path {
+          fill: #ffffff;
+        }
+      }
+    }
+  }
+
   &:checked {
     & + .checkbox__clone::after {
-      background-color: map_get($basic, primary);
       opacity: 1;
     }
   }
@@ -22,24 +32,25 @@
 
 .checkbox__clone {
   position: relative;
-  margin-right: 0.5rem;
   cursor: pointer;
+  transition: 0.2s;
 
   svg {
     position: absolute;
     top: 4px;
     z-index: 10;
     left: 3px;
+    transition: 0.2s;
   }
 
   &::before,
   &::after {
     content: "";
     display: block;
-    border-radius: 0.5rem;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 2.7rem;
+    height: 2.7rem;
     border: 0.1rem solid map_get($basic, primary);
+    transition: 0.2s;
   }
 
   &::after {
@@ -47,5 +58,29 @@
     position: absolute;
     top: 0;
     transition: 0.2s;
+  }
+}
+
+.checkbox__text {
+  word-break: break-word;
+  font-weight: 300;
+  font-size: 1.8rem;
+  display: block;
+  margin-left: 1.5rem;
+}
+
+a.checkbox__link {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: map_get($basic, primary);
+
+  position: absolute;
+  left: 4.1rem;
+  top: calc(100% + 1rem);
+  border-bottom: 1px solid map_get($basic, primary);
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: none;
   }
 }

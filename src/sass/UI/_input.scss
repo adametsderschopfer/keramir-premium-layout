@@ -1,3 +1,62 @@
-.input {
-  display: block;
+.input__cover {
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid map_get($basic, primary);
 }
+
+.input__icon {
+  position: absolute;
+  bottom: 1.3rem;
+  left: 0;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.input {
+  padding: 1.3rem 0.2rem 1.3rem 2.5rem;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.textarea__cover {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textarea__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.3rem;
+}
+
+.textarea__icon {
+  margin-right: 1.5rem;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.textarea__text {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.textarea {
+  font-size: 1.4rem;
+  font-weight: 300;
+  border: 1px solid map_get($basic, primary);
+  max-width: 58.5rem;
+  width: 100%;
+  resize: vertical;
+  height: 100%;
+  min-height: 10rem;
+}
+

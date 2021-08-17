@@ -4,12 +4,15 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 100;
 
   .button-primary {
     color: #ffffff;
   }
 
   &.active {
+    border: 1px solid #000000;
+    border-bottom: none;
     background-color: #ffffff;
 
     input[type="button"] {
@@ -42,9 +45,6 @@
       display: none;
     }
 
-    .wh__above {
-      border-color: #000000;
-    }
 
     .wh__nav {
       border-color: #000000;
@@ -57,7 +57,6 @@
 }
 
 .wh__above {
-  border: 1px solid #ffffff;
   padding: 24px 0;
 }
 
@@ -103,9 +102,25 @@
   li {
     text-align: center;
     cursor: pointer;
+    font-size: 1.8rem;
+    line-height: 4.4rem;
+    font-weight: 300;
+
+    &:not(.selected) span {
+      color: rgba(map_get($basic, primary), 0.75);
+    }
+
+    &.selected {
+      color: map_get($basic, primary);
+      border-bottom: 1px solid map_get($basic, primary);
+    }
 
     &:hover {
-      text-decoration: underline;
+      color: map_get($basic, primary);
+
+      span {
+        color: map_get($basic, primary);
+      }
     }
 
     &:not(:last-of-type) {
@@ -175,7 +190,8 @@
 /* nav */
 
 .wh__nav {
-  border: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
   transition: 0.2s;
 
   display: flex;
