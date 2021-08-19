@@ -1,0 +1,39 @@
+{% include "../blocks/default-banner.twig" with {
+    isSlider: true,
+} %}
+
+{% include "../template-parts/website-breadcrumbs.twig" with {
+    crumbs: ['Главная', 'Коллекция']
+} %}
+
+
+<div class="catalog-detail">
+    <div class="catalog-detail__container container-min">
+         <div class="block-title">
+             Name of the collection
+         </div>
+
+        <div class="catalog-detail__desc">
+            Лид — аннотация, «шапка» статьи, новости или пресс-релиза.<br />
+            Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
+            раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
+        </div>
+
+        <ul class="catalog-detail__advs block-list-center">
+           <li>
+               Цифровые достижения и технологии, которые применялись в различных процессах при производстве, позволили
+               точно воссоздать рисунок и текстуру дерева.
+           </li>
+           <li>
+               Высокая степень прочности
+               и универсальность сделали его одним из самых востребованных материалов
+               для жилых и общественных проектов
+           </li>
+        </ul>
+
+    </div>
+</div>
+
+{% include "../blocks/form-feedback.twig" with {
+    indent: true,
+} %}

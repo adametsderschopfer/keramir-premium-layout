@@ -1,0 +1,81 @@
+{% include "../blocks/default-banner.twig" with {
+    isVideo: true,
+} %}
+
+{% include "../blocks/companies-slider.twig" %}
+
+ {% include "../blocks/default-banner.twig" with {
+     isCatalog: true,
+     isText: true,
+     isSlider: true,
+     noMouse: true,
+     backSlider: ['./assets/images/default-banner.png', './assets/images/default-banner.png', './assets/images/default-banner.png']
+ } %}
+
+{% include "../blocks/workWithUs.twig" %}
+
+<div class="home__indent">
+    {% include "../blocks/default-banner.twig" with {
+        noMouse: true,
+        command: true,
+        backSlider: ['./assets/images/commands.png', './assets/images/commands.png', './assets/images/commands.png', './assets/images/commands.png']
+    } %}
+</div>
+<div class="home__indent home-center">
+    <div class="block-title block-title_big">
+        МАГАЗИНЫ
+    </div>
+
+    {% include "../blocks/shops.twig" %}
+</div>
+
+<div class="home__indent">
+    <div class="container-min home-center">
+        <div class="block-title block-title_big">
+            ЗАГОЛОВОК РАЗДЕЛА
+        </div>
+
+        <div class="home__cat-img">
+            <img src="./assets/images/cat-img.png" alt="">
+        </div>
+
+        <div class="home__cat-btn">
+            {% include "../UI/button.twig" with {
+                text: 'Перейти',
+                colorClass: "_center"
+            } %}
+        </div>
+    </div>
+</div>
+
+<div class="home__indent">
+    {% include "../blocks/default-banner.twig" with {
+        _3d: true,
+        noMouse: true,
+    } %}
+</div>
+
+<div class="home__indent">
+    <div class="container-min home-center">
+        <div class="block-title block-title_big">
+            ЗАГОЛОВОК РАЗДЕЛА
+        </div>
+
+        <div class="home__cat-img">
+            <img src="./assets/images/cat-feed.png" alt="">
+        </div>
+
+        <a href="javascript:void(0)" class="home__cat-link">
+            Читать все отзывы
+        </a>
+
+        <div class="home__cat-btn">
+            {% include "../UI/button.twig" with {
+                text: 'ОСТАВИТЬ ОТЗЫВ',
+                colorClass: "_center sm",
+                data: 'data-popup="form-feedback"'
+            } %}
+        </div>
+    </div>
+</div>
+

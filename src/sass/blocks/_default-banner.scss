@@ -7,6 +7,15 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  overflow: hidden;
+
+  & > * {
+    user-select: none;
+  }
+
+  &:not(:first-of-type) {
+    padding-top: 0;
+  }
 
   &::before {
     content: "";
@@ -20,6 +29,23 @@
   }
 }
 
+.default-banner__command-title {
+  margin-bottom: 4.5rem;
+  font-family: $font2;
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 5.1rem;
+  color: #FFFFFF;
+}
+
+.default-banner__command-descr {
+  color: #FFFFFF;
+  font-size: 2.4rem;
+  line-height: 2.3rem;
+  font-weight: 400;
+}
+
+
 .default-banner__content {
   position: relative;
   z-index: 5;
@@ -28,11 +54,75 @@
   display: flex;
 }
 
+.default-banner__video-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.default-banner__video {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 100%;
+}
+
+.default-banner__video-control {
+  position: relative;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+
+  cursor: pointer;
+
+  svg {
+    width: 30rem;
+    height: 30rem;
+    stroke-width: 3px;
+
+    path {
+      fill: rgba(#ffffff, 0.4);
+    }
+  }
+
+  &.hide {
+    opacity: 0;
+  }
+
+  &.active {
+    .default-banner__video-play {
+      display: none;
+    }
+
+    .default-banner__video-pause {
+      display: block;
+    }
+  }
+}
+
+.default-banner__video-play {
+
+}
+
+.default-banner__video-pause {
+  display: none;
+}
+
+
 .default-banner__mouse {
   position: absolute;
   bottom: 5.4rem;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 
 .default-banner__text {
@@ -104,6 +194,7 @@
 
   &.active {
     padding: 4rem 0;
+    border: 1px solid map_get($basic, primary);
   }
 
   max-height: 41.5rem;
@@ -121,6 +212,8 @@
     justify-content: center;
     font-weight: 300;
     color: map_get($basic, primary);
+    overflow: hidden;
+    min-width: 34rem;
 
     &:hover {
       text-decoration: none;
@@ -190,6 +283,10 @@
       transition: 0.2s;
       transform: rotate(180deg);
     }
+
+    @include bp-desktop() {
+      right: 2rem;
+    }
   }
 
   &__prev {
@@ -214,10 +311,156 @@
         }
       }
     }
+
+    @include bp-desktop() {
+      left: 2rem;
+    }
   }
 
   @include bp-tablet() {
     display: none;
+  }
+}
+
+.default-banner__slider-container {
+  padding: 0 20rem;
+
+  @include bp-desktop() {
+    padding: 0 10rem;
+  }
+
+  @include bp-tablet() {
+    padding: 0 2rem;
+  }
+}
+
+.default-banner__left-text {
+  font-size: 2.4rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border: 1px solid #ffffff;
+  font-weight: 300;
+  color: #ffffff;
+  max-width: 38rem;
+  position: absolute;
+  bottom: 17.5rem;
+  left: 19rem;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+
+  &-command {
+    padding: 2.4rem 3.6rem;
+    max-width: 56.6rem;
+    bottom: 9rem;
+  }
+
+  span {
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+}
+
+.default-banner__3d {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
+  color: #ffffff;
+
+  .button-primary {
+    font-size: 4.8rem;
+    color: #ffffff;
+    border-color: #ffffff;
+    max-width: 50rem;
+
+    &:hover {
+      background-color: rgba(#ffffff, 0.25);
+    }
+  }
+}
+
+.default-banner__3d-desc {
+  margin-bottom: 9.2rem;
+  max-width: 80rem;
+  text-align: center;
+
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 2.3rem;
+}
+
+.default-banner__3d-360 {
+  position: absolute;
+  right: 18.9rem;
+  bottom: 5.4rem;
+}
+
+.default-banner__backSlider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .swiper-wrapper {
+    display: flex;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    min-width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.default-banner__backSlider-controls {
+  width: 135px;
+  height: 60px;
+  position: absolute;
+  right: 18.9rem;
+  bottom: 5rem;
+  border: 1px solid rgba(#ffffff, 0.6);
+  padding: 1.5rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+
+  &:after {
+    content: '';
+    width: 1px;
+    height: calc(100% - 2.3rem);
+    position: absolute;
+    bottom: -0.7rem;
+    left: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .prev, .next {
+    cursor: pointer;
+
+    path {
+      fill: rgba(#ffffff, 0.6);
+    }
+
+    &:hover {
+      path {
+        fill: rgba(#ffffff, 1);
+      }
+    }
+  }
+
+  .prev {
+    svg {
+      transform: rotate(180deg);
+    }
   }
 }
 

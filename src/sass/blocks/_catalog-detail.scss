@@ -1,0 +1,31 @@
+.catalog-detail  {
+  margin-top: 1rem;
+  color: map_get($basic, primary);
+}
+
+.catalog-detail__container  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalog-detail__desc  {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2.4rem;
+  line-height: 2.3rem;
+}
+
+.catalog-detail__advs  {
+  display: flex;
+  justify-content: space-between;
+
+  li {                                                      
+    text-align: center;
+    max-width: 60rem;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 2.3rem;
+  }
+}

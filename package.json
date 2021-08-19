@@ -11,22 +11,6 @@
     "lint-fix": "stylelint --fix scss ./src/**/*.scss",
     "lint-check": "stylelint --syntax scss ./src/**/*.scss"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js}": [
-      "eslint --max-warnings=0",
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.scss": [
-      "stylelint --fix scss ./src/**/*.scss",
-      "git add"
-    ]
-  },
   "dependencies": {
     "vue": "^2.6.12",
     "vuex": "^3.5.1"

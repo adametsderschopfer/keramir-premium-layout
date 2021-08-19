@@ -1,0 +1,54 @@
+{% include "../blocks/default-banner.twig" with {
+    isText: true,
+} %}
+
+{% include "../template-parts/website-breadcrumbs.twig" with {
+    crumbs: ['Главная', 'О компании']
+} %}
+
+<div class="about">
+    <div class="container-min about-container">
+        <div class="block-title">
+            О КОМПАНИИ
+        </div>
+
+        <div class="about__desc">
+            КераМир Premium – это совершенно новая страница в истории компании.
+            <br />Магазин для тех, кто действительно ценит стиль, комфорт и качество окружающего интерьера. ⠀
+        </div>
+
+        <ul class="about__list block-list-center">
+            <li>
+                <ul>
+                    <li>Уникальные готовые дизайнерские решения для вашего пространства;</li>
+                    <li>Italon, Atlas Concorde, Kerama Marazzi и еще более 17 известных производителей;</li>
+                    <li>Мебель и аксессуары для ванной комнаты исключительного качества; ⠀</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>Уютное рабочее пространство для дизайнеров и переговоров;</li>
+                    <li>Высококлассную консультацию наших консультантов-дизайнеров;</li>
+                    <li>Бесплатную разработку индивидуального 3D дизайна вашего помещения</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="about__info">
+            <div class="about__info-img">
+                <img src="./assets/images/about.png" alt="">
+            </div>
+
+            <div class="about__info-text">
+                <p>
+                    «В наших магазинах покупателю легко сделать выбор потому что плитка, мебель для ванной комнаты и
+                    сантехника представлены в реальных интерьерах. Мы делаем все, чтобы создать уют и тепло для самого
+                    ценного – для Вас и Вашей семьи! Приходите, мы сделаем Ваш выбор плитки и сантехники событием!»
+                </p>
+
+                 <div class="about__info-name">Степан Бовыкин</div>
+                 <div class="about__info-who">Генеральный директор<br />сети магазинов КераМир Premium</div>
+            </div>
+        </div>
+    </div>
+</div>

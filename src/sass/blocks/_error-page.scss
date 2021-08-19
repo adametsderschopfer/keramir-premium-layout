@@ -1,0 +1,73 @@
+.error-page {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  color: #ffffff;
+}
+
+.error-page__code {
+  font-weight: 900;
+  font-size: 38.8rem;
+  line-height: 37.1rem;
+  color: #FFFFFF;
+  mix-blend-mode: soft-light;
+
+  @include bp-tablet() {
+    font-size: 20rem;
+    line-height: 20rem;
+  }
+
+  @include bp-mobile() {
+    font-size: 15rem;
+    line-height: 16rem;
+  }
+}
+
+.error-page__text {
+  font-weight: 300;
+  font-size: 4.8rem;
+  line-height: 4.5rem;
+  margin-top: 1.2rem;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include bp-tablet() {
+    font-size: 2.8rem;
+    line-height: 3.5rem;
+  }
+}
+
+.error-page__go-back {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.3rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+    color: #ffffff;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include bp-tablet() {
+    font-size: 1.4rem;
+    line-height: 0;
+  }
+}

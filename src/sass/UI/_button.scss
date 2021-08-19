@@ -15,11 +15,15 @@
     font-size: 3.6rem;
     line-height: 3.4rem;
     max-width: 39rem;
+
+    &.sm {
+      padding: 1.6rem;
+    }
   }
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
 
-  padding: 1.5rem 4rem 1.5rem 2rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
 }

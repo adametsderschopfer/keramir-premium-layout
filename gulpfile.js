@@ -82,6 +82,7 @@ gulp.task('copy', () => {
       './src/**/*.{eot,ttf,woff,woff2,png,jpg,jpeg,webp,svg,ico}',
       './src/js/vendor/**/*.js',
       './src/json/*.json',
+      './src/videos/*.mp4',
     ], {
       base: 'src'
     })
