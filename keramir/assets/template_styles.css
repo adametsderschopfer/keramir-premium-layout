@@ -2352,8 +2352,9 @@ a.checkbox__link {
   font-weight: 900;
   font-size: 38.8rem;
   line-height: 37.1rem;
-  color: #FFFFFF;
-  mix-blend-mode: soft-light; }
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff; }
   @media only screen and (max-width: 991px) {
     .error-page__code {
       font-size: 20rem;

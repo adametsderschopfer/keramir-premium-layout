@@ -20,8 +20,9 @@
   font-weight: 900;
   font-size: 38.8rem;
   line-height: 37.1rem;
-  color: #FFFFFF;
-  mix-blend-mode: soft-light;
+  color: rgba(#FFFFFF, 0.5);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;    
 
   @include bp-tablet() {
     font-size: 20rem;
