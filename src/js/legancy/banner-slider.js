@@ -1,29 +1,31 @@
 ;(() => {
     document.addEventListener('DOMContentLoaded', () => {
-        const bSlider = document.querySelector('.js-banner-slider');
+        const bSliders = document.querySelectorAll('.js-banner-slider');
 
-        if (bSlider) {
-            const swiper = document.querySelector('.js-banner-slider-swiper');
-            const toggle = document.querySelector('.js-banner-slider-toggle');
-            const content = document.querySelector('.js-banner-slider-content');
+        if (bSliders.length) {
+            for (const bSlider of bSliders) {
+                const swiper = bSlider.querySelector('.js-banner-slider-swiper');
+                const toggle = bSlider.querySelector('.js-banner-slider-toggle');
+                const content = bSlider.querySelector('.js-banner-slider-content');
 
-            toggle.addEventListener('click', () => {
-                const isActive = !toggle.classList.contains('active');
+                toggle.addEventListener('click', () => {
+                    const isActive = !!toggle.classList.contains('active');
 
-                toggle.classList[isActive ? 'add' : 'remove']('active');
-                content.classList[isActive ? 'add' : 'remove']('active');
-                content.style.height = isActive ? content.scrollHeight + 'px' : '0';
-            });
+                    toggle.classList[isActive ? 'add' : 'remove']('active');
+                    content.classList[isActive ? 'add' : 'remove']('active');
+                    content.style.height = isActive ? content.scrollHeight + 'px' : '0';
+                });
 
-            new Swiper(swiper, {
-                slidesPerView: 'auto',
-                spaceBetween: 40,
+                new Swiper(swiper, {
+                    slidesPerView: 'auto',
+                    spaceBetween: 40,
 
-                navigation: {
-                    prevEl: ".swiper-nav__prev",
-                    nextEl: ".swiper-nav__next"
-                }
-            });
+                    navigation: {
+                        prevEl: ".swiper-nav__prev",
+                        nextEl: ".swiper-nav__next"
+                    }
+                });
+            }
         }
     })
 })();
