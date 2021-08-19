@@ -61,7 +61,7 @@
                           
     .wwu__blocks-list-item {
       &:nth-child(1) {
-        grid-area: 2 / 1 / 2 / 4;
+        grid-area: 2 / 1 / 2 / 2;
       }
 
       &:nth-child(2) {
@@ -98,10 +98,15 @@
   transition: transform 0.3s;
   user-select: none;
   cursor: default;
+  z-index: 9;
 
   &:hover {
     z-index: 10;
     transform: scale(1.07);
+
+    &:after {
+      opacity: 0;
+    }
   }
 
   &:nth-child(1) {
@@ -110,7 +115,7 @@
   }
 
   &:nth-child(2) {
-    min-width: calc(100vw / 8);
+      min-width: calc(100vw / 8);
     max-width: 24rem;
   }
 
@@ -128,6 +133,7 @@
       width: 100%;
       height: 100%;
       background-color: rgba(#000000, 0.25);
+      transition: 0.2s;
     }
 
     &:hover {
