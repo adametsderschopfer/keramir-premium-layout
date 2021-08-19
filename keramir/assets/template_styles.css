@@ -2494,6 +2494,8 @@ a.checkbox__link {
     z-index: 10;
     -webkit-transform: scale(1.07);
             transform: scale(1.07); }
+    .wwu__blocks-list-item:hover:after {
+      opacity: 0; }
   .wwu__blocks-list-item:nth-child(1) {
     min-width: calc(100vw / 8);
     max-width: 24rem; }
@@ -2510,7 +2512,9 @@ a.checkbox__link {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.25); }
+    background-color: rgba(0, 0, 0, 0.25);
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
   .wwu__blocks-list-item:not(.wwu__blocks-list-item-no-text):hover .wwu__blocks-list-item-text {
     background-color: #000000; }
   .wwu__blocks-list-item:not(.wwu__blocks-list-item-no-text) .wwu__blocks-list-item-text {
