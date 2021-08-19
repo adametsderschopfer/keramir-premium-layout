@@ -125,6 +125,12 @@ gulp.task('reload', done => {
   done()
 })
 
+gulp.task('copy-ker', () => {
+  return gulp
+      .src('./public/**/*')
+      .pipe(gulp.dest('keramir'));
+})
+
 gulp.task('build', gulp.series(
   'clean',
   'copy',
@@ -133,6 +139,7 @@ gulp.task('build', gulp.series(
   'vue',
   'html',
   'images',
+  'copy-ker',
 ))
 
 gulp.task('start', gulp.series(

@@ -15,6 +15,7 @@
                 video.addEventListener('timeupdate', () => {
                     if (video.ended) {
                         video.load();
+                        video.click();
                     }
                 });
 

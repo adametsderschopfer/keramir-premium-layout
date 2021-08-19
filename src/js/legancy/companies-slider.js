@@ -8,6 +8,7 @@
                 autoplay: {
                     delay: 2000
                 },
+                loop: true,
                 navigation: {
                     prevEl: '.js-companies-slider-prev',
                     nextEl: '.js-companies-slider-next',
