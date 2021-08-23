@@ -18,16 +18,16 @@
     {% set url = "" %}
 {% endif %}
 
-<div class="default-banner {{ isSlider ? "default-banner_slider" }}"
+<div class="default-banner{{ isSlider ? " default-banner_slider" }}"
      {% if not backSlider %}style="background-image: url({{ url }});"{% endif %}>
 
     {% if backSlider %}
         <div class="js-back-slider">
             <div class="default-banner__backSlider js-back-slider-swiper">
                 <div class="swiper-wrapper">
-                    {% for item in backSlider %}
+                    {% for item in [1,2,3,4,1,2,3,4]%}
                         <div class="swiper-slide">
-                            <img src="{{ item }}" alt="">
+                            <img src="./assets/images/catalog-{{ item }}.png" alt="">
                         </div>
                     {% endfor %}
                 </div>
@@ -141,10 +141,10 @@
                         <div class="default-banner__slider-container">
                             <div class="js-banner-slider-swiper default-banner__slider-swiper">
                                 <div class="swiper-wrapper">
-                                    {% for i in [1,2,3,4,1,2,3,4,1,2,3] %}
+                                    {% for i in [1,2,3,4,1,2,3,4] %}
                                         <a href="javascript:void(0);" class="swiper-slide default-banner__slide">
                                             <div class="default-banner__slide-img">
-                                                <img src="./assets/images/slide-{{ i }}.png" alt="">
+                                                <img src="./assets/images/catalog-{{ i }}.png" alt="">
                                             </div>
 
                                             <div class="default-banner__slide-builder">
