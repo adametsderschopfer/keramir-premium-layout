@@ -895,6 +895,12 @@ if (!('Promise' in globalNS)) {
 
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 ;
 
 (function () {
@@ -911,9 +917,57 @@ if (!('Promise' in globalNS)) {
         content.classList[isActive ? 'add' : 'remove']('active');
         content.style.height = isActive ? content.scrollHeight + 'px' : '0';
       });
-      new Swiper(swiper, {
+      window.bannerSlider = new Swiper(swiper, {
         slidesPerView: 4,
         spaceBetween: 40,
+        on: {
+          init: function init(_ref) {
+            var slides = _ref.slides;
+
+            if (slides.length) {
+              var _iterator = _createForOfIteratorHelper(slides),
+                  _step;
+
+              try {
+                var _loop = function _loop() {
+                  var slide = _step.value;
+                  slide.addEventListener('click', function () {
+                    var idx = slide.getAttribute('aria-label').split('/')[0].trim();
+                    var wrapper = bSlider.closest('.default-banner');
+
+                    if (wrapper) {
+                      var backSlider = wrapper.querySelector('.js-back-slider');
+
+                      if (backSlider && +idx) {
+                        var id = backSlider.getAttribute('global-id');
+
+                        if (id) {
+                          var _window$backSlider$fi;
+
+                          var _slider = (_window$backSlider$fi = window.backSlider.find(function (i) {
+                            return i.id.toString() === id.toString();
+                          })) === null || _window$backSlider$fi === void 0 ? void 0 : _window$backSlider$fi.swiper;
+
+                          if (_slider) {
+                            _slider.slideTo(+idx);
+                          }
+                        }
+                      }
+                    }
+                  });
+                };
+
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  _loop();
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
+              }
+            }
+          }
+        },
         navigation: {
           prevEl: ".swiper-nav__prev",
           nextEl: ".swiper-nav__next"
@@ -1479,6 +1533,14 @@ var Coorp = {
 window.Coorp = Coorp;
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -1490,6 +1552,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
     var swiperContents = document.querySelectorAll('.js-back-slider');
+    window.backSlider = [];
 
     if (swiperContents.length) {
       var _iterator = _createForOfIteratorHelper(swiperContents),
@@ -1503,17 +1566,22 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var swiper = swiperContent.querySelector('.js-back-slider-swiper');
 
           if (swiper) {
-            new Swiper(swiper, {
-              slidesPerView: "auto",
-              autoplay: {
-                delay: 3000
-              },
-              loop: true,
-              navigation: {
-                prevEl: prev,
-                nextEl: next
-              }
-            });
+            var id = Math.random() * Date.now();
+            swiperContent.setAttribute('global-id', id);
+            window.backSlider = [].concat(_toConsumableArray(window.backSlider), [{
+              swiper: new Swiper(swiper, {
+                slidesPerView: "auto",
+                autoplay: {
+                  delay: 3000
+                },
+                loop: true,
+                navigation: {
+                  prevEl: prev,
+                  nextEl: next
+                }
+              }),
+              id: id
+            }]);
           }
         }
       } catch (err) {
