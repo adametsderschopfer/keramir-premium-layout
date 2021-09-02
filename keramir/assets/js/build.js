@@ -1955,6 +1955,7 @@ function chunk(arr, len) {
           close: false,
           onAfterAppend: function onAfterAppend(result) {
             formFeedbackPopup.remove();
+            window.PhoneMask.init();
           }
         });
 

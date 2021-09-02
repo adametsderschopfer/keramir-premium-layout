@@ -92,7 +92,7 @@ function chunk(arr, len) {
     }
 
     document.addEventListener('DOMContentLoaded', () => PhoneMaskInit());
-    window.PhoneMask = {init: PhoneMaskInit}
+    window.PhoneMask = ({init: PhoneMaskInit});
 })();
 
 ;(() => {
@@ -112,6 +112,7 @@ function chunk(arr, len) {
                close: false,
                onAfterAppend(result) {
                    formFeedbackPopup.remove();
+                   window.PhoneMask.init();
                }
            });
 
