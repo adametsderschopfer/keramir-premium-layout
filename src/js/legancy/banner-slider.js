@@ -18,11 +18,9 @@
 
                 new Swiper(swiper, {
                     slidesPerView: 'auto',
-                    spaceBetween: 40,
-
                     navigation: {
-                        prevEl: ".swiper-nav__prev",
-                        nextEl: ".swiper-nav__next"
+                        prevEl: ".js-slider-controls .prev",
+                        nextEl: ".js-slider-controls .next"
                     }
                 });
             }

@@ -5,15 +5,29 @@
 .breadcrumbs-container {
   display: flex;
   align-items: center;
-
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
   a,
   span {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 300;
     color: map_get($basic, primary);
+  }
+
+  @include bp-tablet() {
   }
 }
 
 .breadcrumbs__link {
+  white-space: nowrap;
+  
   &:not([href]) {
     &:hover {
       text-decoration: none;

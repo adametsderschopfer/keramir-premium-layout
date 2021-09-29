@@ -1,6 +1,9 @@
 .wwu {
   margin-top: 16rem;
-  margin-bottom: 16rem;
+
+  @include bp-tablet() {
+    margin-top: 8rem;
+  }
 }
 
 .wwu-container {
@@ -11,25 +14,36 @@
 }
 
 .wwu__title {
-  font-weight: 700;
-  font-size: 6.4rem;
-  line-height: 6.8rem;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 60px;
   margin-bottom: 4rem;
   text-transform: uppercase;
-  font-family: $font2;
+  font-family: $font1;
+  text-align: center;
+
+  @include bp-tablet() {
+    font-size: 36px;
+    line-height: 45px;
+  }
 }
 
 .wwu__desc {
+  font-style: normal;
   font-weight: 300;
-  font-size: 2.4rem;
-  line-height: 2.3rem;
-  margin-bottom: 6rem;
+  font-size: 18px;
+  line-height: 23px;
   text-align: center;
+  margin-bottom: 6rem;
   max-width: 76rem;
 }
 
 .wwu__blocks {
   display: flex;
+
+  @include bp-desktop() {
+    justify-content: center;
+  }
 }
 
 .wwu__blocks-list {
@@ -51,6 +65,10 @@
 
       &:nth-child(3) {
         grid-area: 1 / 2 / 3 / 3;
+
+        @include bp-tablet() {
+          display: none;
+        }
       }
     }
   }
@@ -72,6 +90,10 @@
         grid-area: 1 / 1 / 1 / 1;
       }
     }
+
+    @include bp-desktop() {
+      display: none;
+    }
   }
   
   &:nth-child(3) {
@@ -88,6 +110,14 @@
         grid-area: 3 / 2 / 1 / 1;
       }
     }
+
+    @include bp-tablet() {
+      display: none;
+    }
+  }
+
+  @include bp-tablet() {
+    grid-template-columns: repeat(1, calc(100vw));
   }
 }
 
@@ -112,11 +142,19 @@
   &:nth-child(1) {
     min-width: calc(100vw / 8);
     max-width: 24rem;
+
+    @include bp-tablet() {
+      min-width: calc(100vw);
+    }
   }
 
   &:nth-child(2) {
-      min-width: calc(100vw / 8);
+    min-width: calc(100vw / 8);
     max-width: 24rem;
+
+    @include bp-tablet() {
+      min-width: calc(100vw);
+    }
   }
 
   &:nth-child(3) {
@@ -193,14 +231,17 @@
   justify-content: center;
   z-index: 8;
   width: 100%;
-  padding: 0 2rem;
 }
 
 .wwu__blocks-list-item__title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.7rem;
+
+  @include bp-desktopHD() {
+    font-size: 1.4rem;
+  }
 }
 
 .wwu__blocks-list-item__desc {

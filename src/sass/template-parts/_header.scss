@@ -1,22 +1,36 @@
 .wh {
-  background-color: rgba(#000000, 0.5);
   transition: 0.2s;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 100;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 
   .button-primary {
     color: #ffffff;
   }
 
   &.active {
-    border: 1px solid #000000;
-    border-bottom: none;
-    background-color: #ffffff;
+    background: #ffffff;
+
+    .wh-mobile-burger--button {
+      span {
+        background-color: #000000;
+      }
+
+      &:before, &:after {
+        background-color: #000000;
+      }
+    }
 
     input[type="button"] {
       color: #000000;
+    }
+
+    svg {
+      path {
+        fill: #000000;
+      }
     }
 
     .wh__above-info-city-btn {
@@ -47,11 +61,16 @@
 
 
     .wh__nav {
-      border-color: #000000;
 
       .wh__nav-item a {
         color: #000000;
       }
+    }
+  }
+
+  @include bp-tablet() {
+    .wf__bottom-socials {
+      display: none;
     }
   }
 }
@@ -70,6 +89,16 @@
   display: flex;
   align-items: center;
   max-width: 42rem;
+
+  @include bp-tablet() {
+    flex-direction: column-reverse;
+    order: 1;
+    align-items: flex-start;
+  }
+}
+
+.wh-mobile-phone {
+  margin-top: 1rem;
 }
 
 .wh__above-info-city {
@@ -81,6 +110,10 @@
       opacity: 1;
       pointer-events: all;
     }
+  }
+
+  @include bp-tablet() {
+    width: auto;
   }
 }
 
@@ -157,14 +190,28 @@
 
 .wh__above-info-number {
   color: #ffffff;
+  width: 23rem;
   font-size: 1.6rem;
-  margin-left: 6.5rem;
+
+  @include bp-tablet() {
+    display: none;
+  }
+
+  &.wh-mobile-phone {
+    display: flex;
+    width: auto;
+
+    @include bp-tablet(min) {
+      display: none;
+    }
+  }
 }
 
 .wh__above-logo {
-  width: 17.5rem;
+  width: 100%;
   height: 10rem;
   position: relative;
+  min-width: 18.5rem;
 
   img {
     width: 100%;
@@ -173,6 +220,12 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+
+  @include bp-tablet() {
+    min-width: 6rem;
+    height: 5rem;
+    margin: 0 2rem;
   }
 }
 
@@ -185,18 +238,24 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+
+  @include bp-tablet() {
+    display: none;
+  }
 }
 
 /* nav */
 
 .wh__nav {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
   transition: 0.2s;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include bp-tablet() {
+    display: none;
+  }
 }
 
 .wh__nav-list {
@@ -216,5 +275,161 @@
     font-size: 1.6rem;
     color: #ffffff;
     text-transform: uppercase;
+  }
+}
+
+.wh-mobile-burger--menu {
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  position: fixed;
+  z-index: 100000;
+
+  transition: 0.2s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @include bp-tablet(min) {
+    display: none;
+  }
+}
+
+.wh-mobile-burger--menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 3rem 4rem;
+  color: #000000;
+
+  .wh__nav-mobile {
+    display: flex;
+    padding-top: 4.5rem;
+    padding-bottom: 6rem;
+
+    ul {
+      align-items: flex-start;
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    a {
+      color: #000000;
+    }
+  }
+
+  .wh__above-info-city {
+    color: #000000;
+  }
+
+  .wh__above-btn {
+    display: flex;
+    width: auto;
+
+    .button-primary {
+      color: #000000;
+      border-color: #000000;
+    }
+  }
+
+  .wh__above-info-city-btn {
+    margin-bottom: 2.1rem;
+
+    input {
+      color: #000000;
+    }
+
+    svg {
+      path {
+        fill: #000000;
+      }
+    }
+  }
+
+  .wh__above-info-number {
+    margin-bottom: 1.7rem;
+    color: #000000;
+    margin-top: 0;
+  }
+
+  .wf__bottom-socials {
+    margin-top: 3.4rem;
+
+    svg {
+      path {
+        fill: #000000;
+      }
+    }
+  }
+
+  .wh__above-logo {
+    width: 12.5rem;
+    height: 7rem;
+
+    .wh__above-logo-black {
+      display: block;
+    }
+  }
+}
+
+.wh__nav-mobile {
+  ul {
+    flex-direction: column;
+  }
+}
+
+.wh-mobile-burger--close {
+  position: absolute;
+  top: 4rem;
+  left: 3.3rem;
+}
+
+.wh-mobile-burger--button {
+  min-width: 2.5rem;
+  width: 2.5rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  span {
+    background-color: #ffffff;
+    min-width: 2.5rem;
+    width: 2.5rem;
+    height: 0.1rem;
+    max-height: 0.1rem;
+    display: block;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 2.5rem;
+    height: 0.1rem;
+    background-color: #ffffff;
+  }
+
+  &:after {
+    top: 0;
+  }
+
+  &:before {
+    bottom: 0;
+  }
+
+  @include bp-tablet(min) {
+    display: none;
   }
 }

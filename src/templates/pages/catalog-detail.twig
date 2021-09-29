@@ -1,24 +1,21 @@
 {% include "../blocks/default-banner.twig" with {
-    isSlider: true,
 } %}
 
 {% include "../template-parts/website-breadcrumbs.twig" with {
-    crumbs: ['Главная', 'Коллекция']
+    crumbs: ['Главная', 'Коллекция', 'Название коллекции']
 } %}
+<div class="block-title">
+    Name of the collection
+</div>
 
+<div class="block-descr">
+    Лид — аннотация, «шапка» статьи, новости или пресс-релиза.<br />
+    Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
+    раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
+</div>
 
 <div class="catalog-detail">
     <div class="catalog-detail__container container-min">
-         <div class="block-title">
-             Name of the collection
-         </div>
-
-        <div class="catalog-detail__desc">
-            Лид — аннотация, «шапка» статьи, новости или пресс-релиза.<br />
-            Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
-            раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
-        </div>
-
         <ul class="catalog-detail__advs block-list-center">
            <li>
                Цифровые достижения и технологии, которые применялись в различных процессах при производстве, позволили

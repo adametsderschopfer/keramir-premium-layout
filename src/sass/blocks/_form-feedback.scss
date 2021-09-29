@@ -1,5 +1,9 @@
 .form-feedback-indent {
   margin: 16rem 0;
+
+  @include bp-tablet() {
+    margin: 6rem 0;
+  }
 }
 
 .form-feedback {
@@ -7,16 +11,16 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 0 2rem;
 }
 
 .form-feedback__title {
-  font-size: 2.4rem;
-  font-weight: 300;
-  line-height: 2.2rem;
-  margin-bottom: 3.5rem;
-  text-transform: uppercase;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  margin-bottom: 3rem;
+  color: #343434;
 }
 
 .form-feedback__form {
@@ -32,6 +36,11 @@
   margin-left: auto;
   font-family: $font1;
   font-weight: 300;
+
+  @include bp-tablet() {
+    width: 100%;
+    font-size: 2.5rem;
+  }
 }
 
 .form-feedback__fields {

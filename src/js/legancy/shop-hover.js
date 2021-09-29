@@ -1,5 +1,5 @@
 ;(function () {
-    document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
         const shops = document.querySelector('.shops');
 
         if (shops) {

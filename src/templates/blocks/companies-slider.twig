@@ -1,56 +1,11 @@
-<div class="companies-slider">
-    <div class="companies-slider__swiper js-companies-slider">
-        <div class="swiper-wrapper companies-slider__wrapper">
-            {% for i in [1,2,3,3,2,1,2,3,1] %}
-                <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                    <div class="companies-slider__img-first">
-                        <img src="./assets/images/logo-p{{ i }}.png" alt="">
-                    </div>
-                    <div class="companies-slider__img-second">
-                        <img src="./assets/images/logo-p{{ i }}-hover.png" alt="">
-                    </div>
-                </a>
-            {% endfor %}
-        </div>
-    </div>
-
-    <div class="swiper-nav">
-        <div class="swiper-nav__prev js-companies-slider-prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                <g filter="url(#filter0_i)">
-                    <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"></path>
-                </g>
-                <defs>
-                    <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                        <feOffset dy="4"></feOffset>
-                        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
-                    </filter>
-                </defs>
-            </svg></div>
-        <div class="swiper-nav__next js-companies-slider-next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                <g filter="url(#filter0_i)">
-                    <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"></path>
-                </g>
-                <defs>
-                    <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                        <feOffset dy="4"></feOffset>
-                        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                        <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-                        <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
-                    </filter>
-                </defs>
-            </svg>
-        </div>
+<div class="companies">
+    <div class="companies__wrapper">
+        {% for i in [11,10,9,8,7,6,5,4,3,2,1] %}
+            <a href="javascript:void(0)" class="companies__item">
+                <div class="companies__item-shown">
+                    <img src="./assets/images/comp-{{ i }}.png" alt="">
+                </div>
+            </a>
+        {% endfor %}
     </div>
 </div>

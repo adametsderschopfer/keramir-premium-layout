@@ -2,7 +2,7 @@
 
 {% if isNothing %}
     {% set url = "'./assets/images/banner-2.png'" %}
-{% elseif isText %}
+{% elseif isText or isCar %}
     {% set url = "'./assets/images/banner-3.png'" %}
 {% endif %}
 
@@ -14,18 +14,22 @@
     {% set url = "./assets/images/3d-banner.png" %}
 {% endif %}
 
+{% if isMain %}
+    {% set url = "./assets/images/default-banner.png" %}
+{% endif %}
+
 {% if isVideo %}
     {% set url = "" %}
 {% endif %}
 
-<div class="default-banner{{ isSlider ? " default-banner_slider" }}"
+<div class="default-banner{{ isSlider ? " default-banner_slider" }}{{ command ? ' with-content' }}"
      {% if not backSlider %}style="background-image: url({{ url }});"{% endif %}>
 
     {% if backSlider %}
         <div class="js-back-slider">
             <div class="default-banner__backSlider js-back-slider-swiper">
                 <div class="swiper-wrapper">
-                    {% for item in [1,2,3,4,1,2,3,4]%}
+                    {% for item in [1,2,3,4,1,2,3,4] %}
                         <div class="swiper-slide">
                             <img src="./assets/images/catalog-{{ item }}.png" alt="">
                         </div>
@@ -33,21 +37,21 @@
                 </div>
             </div>
 
-            <div class="default-banner__backSlider-controls js-back-slider-controls">
-          <span class="prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-              <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z"
-                    fill="white"/>
-            </svg>
-          </span>
+            {% if withControls and not isSlider %}
+                <div class="default-banner__backSlider-controls js-slider-controls">
+                  <span class="prev">
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6533 20.0577L1.11225 10.5167L10.6533 0.975586" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
 
-                <span class="next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-              <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z"
-                    fill="white"/>
-            </svg>
-          </span>
-            </div>
+                  <span class="next">
+                    <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.05591 19.8136L10.597 10.2725L1.05591 0.731445" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+            {% endif %}
         </div>
     {% endif %}
 
@@ -78,7 +82,7 @@
         <div class="default-banner__content">
             {% if _3d %}
                 <div class="default-banner__3d">
-                    <div class="block-title block-title_big">
+                    <div class="block-title">
                         3D ДИЗАЙН ПРОЕКТ - БЕСПЛАТНО
                     </div>
 
@@ -99,13 +103,13 @@
             {% endif %}
 
             {% if isCatalog %}
-                <div class="default-banner__text">
-                    <div class="default-banner__title">Каталог</div>
-                    <div class="default-banner__descr">Лид — аннотация, «шапка» статьи, новости или пресс-релиза.
-                        <br/>Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
-                        раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
-                    </div>
-                </div>
+                {# <div class="default-banner__text"> #}
+                {# <div class="default-banner__title">Каталог</div> #}
+                {# <div class="default-banner__descr">Лид — аннотация, «шапка» статьи, новости или пресс-релиза. #}
+                {# <br/>Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема, #}
+                {# раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк. #}
+                {# </div> #}
+                {# </div> #}
             {% endif %}
 
             {% if command %}
@@ -121,21 +125,33 @@
                 </div>
             {% endif %}
 
-            {% if isText %}
-                <div class="default-banner__left-text">
-                    ФОТОГРАФИИ СДЕЛАНЫ
-                    В МАГАЗИНЕ <span>КЕРАМИР</span>
-                </div>
-            {% endif %}
-
             {% if isSlider %}
                 <div class="default-banner__slider js-banner-slider">
-                    <button class="default-banner__slider-toggle js-banner-slider-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="61" height="29" viewBox="0 0 61 29" fill="none">
-                            <path d="M30.5 29C30.04 29 29.5799 28.8233 29.2349 28.5582L0.368182 2.05008C-0.206852 1.51992 -0.0918457 0.724678 0.598196 0.282876C1.28824 -0.158926 2.3233 -0.0705655 2.89834 0.459597L30.5 25.819L58.1017 0.459597C58.6767 -0.0705655 59.7118 -0.158926 60.4018 0.282876C61.0918 0.724678 61.2069 1.51992 60.6318 2.05008L31.7651 28.5582C31.4201 28.8233 30.96 29 30.5 29Z"
-                                  fill="white"/>
-                        </svg>
-                    </button>
+                    <div class="default-banner__slider-row-nav">
+                        <button class="default-banner__slider-toggle js-banner-slider-toggle">
+                            <i>
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.2857 25.3936L22.0179 19.1257L15.75 25.3936" stroke="#020202" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </i>
+
+                            <span>Коллекции</span>
+                        </button>
+
+                        <div class="default-banner__backSlider-controls js-slider-controls">
+                          <span class="prev">
+                            <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6533 20.0577L1.11225 10.5167L10.6533 0.975586" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                          </span>
+
+                            <span class="next">
+                                <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.05591 19.8136L10.597 10.2725L1.05591 0.731445" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </span>
+                        </div>
+                    </div>
 
                     <div class="default-banner__slider-content js-banner-slider-content">
                         <div class="default-banner__slider-container">
@@ -147,72 +163,19 @@
                                                 <img src="./assets/images/catalog-{{ i }}.png" alt="">
                                             </div>
 
-                                            <div class="default-banner__slide-builder">
-                                                Производитель
-                                            </div>
+                                            <div class="default-banner__slide-content">
+                                                <div class="default-banner__slide-builder">
+                                                    Производитель
+                                                </div>
 
-                                            <div class="default-banner__slide-name">
-                                                Name of the collection
+                                                <div class="default-banner__slide-name">
+                                                    Name of the collection - {{ i }}
+                                                </div>
                                             </div>
                                         </a>
                                     {% endfor %}
                                 </div>
 
-                            </div>
-                        </div>
-
-                        <div class="swiper-nav">
-                            <div class="swiper-nav__prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97"
-                                     fill="none">
-                                    <g filter="url(#filter0_i)">
-                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z"
-                                              fill="#939292"/>
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_i" x="0" y="0" width="46" height="101"
-                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                     result="shape"/>
-                                            <feColorMatrix in="SourceAlpha" type="matrix"
-                                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                           result="hardAlpha"/>
-                                            <feOffset dy="4"/>
-                                            <feGaussianBlur stdDeviation="2"/>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                                            <feColorMatrix type="matrix"
-                                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <div class="swiper-nav__next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97"
-                                     fill="none">
-                                    <g filter="url(#filter0_i)">
-                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z"
-                                              fill="#939292"/>
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_i" x="0" y="0" width="46" height="101"
-                                                filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix"
-                                                     result="shape"/>
-                                            <feColorMatrix in="SourceAlpha" type="matrix"
-                                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                                                           result="hardAlpha"/>
-                                            <feOffset dy="4"/>
-                                            <feGaussianBlur stdDeviation="2"/>
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                                            <feColorMatrix type="matrix"
-                                                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
-                                        </filter>
-                                    </defs>
-                                </svg>
                             </div>
                         </div>
                     </div>

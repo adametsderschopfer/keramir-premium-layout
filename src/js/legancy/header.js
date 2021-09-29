@@ -1,5 +1,5 @@
 ;(() => {
-    document.addEventListener('DOMContentLoaded', () => { 
+    window.addEventListener('load', () => {
         const header = document.querySelector('.js-header');
 
         if (header) {

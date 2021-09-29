@@ -2,7 +2,7 @@
     <div class="container-min breadcrumbs-container">
         {% for crumb in crumbs %}
             <a
-                    {% if not loop.first %}
+                    {% if not loop.last %}
                         href="/"
                     {% endif %}
 

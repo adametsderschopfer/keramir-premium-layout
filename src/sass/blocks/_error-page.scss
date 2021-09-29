@@ -17,12 +17,10 @@
 }
 
 .error-page__code {
-  font-weight: 900;
+  font-weight: normal;
   font-size: 38.8rem;
   line-height: 37.1rem;
-  color: rgba(#FFFFFF, 0.5);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #fff;    
+  color: rgba(#FFFFFF, 1);
 
   @include bp-tablet() {
     font-size: 20rem;

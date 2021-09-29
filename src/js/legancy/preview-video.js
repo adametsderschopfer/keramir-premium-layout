@@ -1,5 +1,5 @@
 ;(function () {
-    document.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
         const preview = document.querySelector('.js-preview');
 
         if (preview) {

@@ -22,6 +22,11 @@
     &.sm {
       padding: 1.6rem;
     }
+
+    @include bp-tablet() {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 
   &:hover {
