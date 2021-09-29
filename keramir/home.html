@@ -11,10 +11,133 @@
 </head>
 
 <body>
+    <div class="wh-mobile-burger--menu js-burger--menu">
+        <div class="wh-mobile-burger--close js-burger--button-close">
+            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L20 20" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M1 20.002L20 1.00195" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+
+        <div class="wh-mobile-burger--menu-content">
+            <a class="wh__above-logo" href="/home.html">
+                <img class="wh__above-logo-black" src="./assets/images/logo-black.png" alt="">
+            </a>
+
+            <nav class="wh__nav wh__nav-mobile">
+                <ul class="wh__nav-list">
+                    <li class="wh__nav-item">
+                        <a href="javascript:void(0)">МАГАЗИНЫ</a>
+                    </li>
+                    <li class="wh__nav-item">
+                        <a href="javascript:void(0)">Сотрудничество</a>
+                    </li>
+                    <li class="wh__nav-item">
+                        <a href="javascript:void(0)">КАТАЛОГ</a>
+                    </li>
+                    <li class="wh__nav-item">
+                        <a href="javascript:void(0)">О КОМПАНИИ</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="wh__above-info-city js-select">
+                <div class="js-drop-item wh__above-info-city-item">
+                    <div class="wh__above-info-city-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 255.856 255.856" height="23px" width="23px" style="enable-background:new 0 0 255.856 255.856;" xml:space="preserve">
+                            <path d="M127.928,38.8c-30.75,0-55.768,25.017-55.768,55.767s25.018,55.767,55.768,55.767   s55.768-25.017,55.768-55.767S158.678,38.8,127.928,38.8z M127.928,135.333c-22.479,0-40.768-18.288-40.768-40.767   S105.449,53.8,127.928,53.8s40.768,18.288,40.768,40.767S150.408,135.333,127.928,135.333z" />
+                            <path d="M127.928,0C75.784,0,33.362,42.422,33.362,94.566c0,30.072,25.22,74.875,40.253,98.904   c9.891,15.809,20.52,30.855,29.928,42.365c15.101,18.474,20.506,20.02,24.386,20.02c3.938,0,9.041-1.547,24.095-20.031   c9.429-11.579,20.063-26.616,29.944-42.342c15.136-24.088,40.527-68.971,40.527-98.917C222.495,42.422,180.073,0,127.928,0z    M171.569,181.803c-19.396,31.483-37.203,52.757-43.73,58.188c-6.561-5.264-24.079-26.032-43.746-58.089   c-22.707-37.015-35.73-68.848-35.73-87.336C48.362,50.693,84.055,15,127.928,15c43.873,0,79.566,35.693,79.566,79.566   C207.495,112.948,194.4,144.744,171.569,181.803z" />
+                        </svg>
+                        <input type="button" name="" value="ЕКАТЕРИНБУРГ" class="js-select-trigger js-default-checked-select">
+                    </div>
+
+                    <ul class="wh__above-info-city-list js-select-dropdown">
+                        <li class="js-default-checked-change-select selected">
+                            <span>Екатеринбург</span>
+                        </li>
+                        <li class="js-default-checked-change-select">
+                            <span>Челябинск</span>
+                        </li>
+                        <li class="js-default-checked-change-select">
+                            <span>Тюмень</span>
+                        </li>
+                        <li class="js-default-checked-change-select">
+                            <span>Уфа</span>
+                        </li>
+                        <li class="js-default-checked-change-select">
+                            <span>Пермь</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="tel:+7 (343) 384 57 89" class="wh__above-info-number wh-mobile-phone">+7 (343) 384 57 89</a>
+            <div class="wh__above-btn">
+                <button class="button-primary
+                " data-popup="form-feedback">
+                    Оставить заявку
+
+                </button>
+
+            </div>
+            <div class="wf__bottom-socials">
+                <a href="javascript:void(0)">
+                    <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.30359 10.8033H10.4398C10.4398 10.8033 10.7832 10.7652 10.9579 10.5763C11.1196 10.4028 11.1136 10.0771 11.1136 10.0771C11.1136 10.0771 11.0911 8.55232 11.7994 8.3277C12.497 8.10664 13.3931 9.8014 14.3427 10.4539C15.0605 10.9471 15.606 10.8389 15.606 10.8389L18.1458 10.8033C18.1458 10.8033 19.4745 10.7213 18.8446 9.67661C18.7935 9.59104 18.4774 8.90411 16.9561 7.49221C15.3636 6.01375 15.5775 6.25382 17.4957 3.69743C18.664 2.14053 19.131 1.18976 18.9849 0.783302C18.8458 0.395861 17.9865 0.498069 17.9865 0.498069L15.1295 0.514708C15.1295 0.514708 14.9179 0.486184 14.7599 0.580073C14.6065 0.672774 14.5079 0.886698 14.5079 0.886698C14.5079 0.886698 14.0551 2.09181 13.4513 3.11627C12.1785 5.27809 11.6686 5.39218 11.4607 5.25789C10.977 4.94532 11.0982 4.00049 11.0982 3.33019C11.0982 1.23492 11.4155 0.361395 10.479 0.135586C10.1676 0.0607126 9.93942 0.0107969 9.14434 0.00247762C8.12463 -0.0082186 7.26062 0.00604302 6.77216 0.244925C6.44652 0.40418 6.19575 0.759532 6.34906 0.779736C6.53803 0.804694 6.96588 0.895018 7.19287 1.20402C7.48643 1.60216 7.47573 2.49826 7.47573 2.49826C7.47573 2.49826 7.64449 4.96433 7.08235 5.27096C6.6961 5.48132 6.16723 5.05228 5.03224 3.09012C4.45108 2.08586 4.01135 0.974645 4.01135 0.974645C4.01135 0.974645 3.92696 0.767852 3.77603 0.657324C3.593 0.523027 3.3363 0.480242 3.3363 0.480242L0.619457 0.496881C0.619457 0.496881 0.211813 0.508766 0.0620657 0.685847C-0.0710428 0.843914 0.0513695 1.16955 0.0513695 1.16955C0.0513695 1.16955 2.17873 6.14567 4.58656 8.65453C6.79593 10.9542 9.30359 10.8033 9.30359 10.8033Z" fill="white" />
+                    </svg>
+                </a>
+
+                <a href="javascript:void(0)">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.29749 18V9.55388H0V6.51287H2.29749V3.91545C2.29749 1.87438 3.65463 0 6.78176 0C8.04789 0 8.98413 0.11799 8.98413 0.11799L8.91036 2.95778C8.91036 2.95778 7.95554 2.94874 6.9136 2.94874C5.78591 2.94874 5.60524 3.45391 5.60524 4.29237V6.51287H9L8.85229 9.55388H5.60524V18H2.29749Z" fill="white" />
+                    </svg>
+                </a>
+
+                <a href="javascript:void(0)">
+                    <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.23763 11.9743C2.92922 11.8376 1.749 11.5128 0.738848 10.7172C0.61322 10.618 0.483318 10.5223 0.369655 10.4121C-0.0730343 9.98476 -0.117474 9.49421 0.232917 8.98999C0.532031 8.55755 1.03454 8.44218 1.55671 8.69087C1.65756 8.73788 1.75327 8.79855 1.84643 8.86265C3.72914 10.1651 6.31605 10.201 8.2056 8.92162C8.39361 8.77633 8.59359 8.6584 8.82519 8.59857C9.27643 8.48235 9.6969 8.649 9.93875 9.04639C10.2156 9.49934 10.2122 9.94373 9.87124 10.295C9.34907 10.8359 8.72007 11.2265 8.02186 11.4991C7.36124 11.7572 6.63738 11.8871 5.92207 11.9726C6.02975 12.0914 6.08103 12.1495 6.14854 12.2179C7.12024 13.2007 8.09706 14.1809 9.06619 15.1671C9.39607 15.5038 9.4653 15.92 9.28326 16.3115C9.08414 16.7388 8.63974 17.0199 8.20303 16.99C7.92699 16.9704 7.71163 16.8319 7.51934 16.6379C6.78609 15.8944 6.03915 15.1646 5.32043 14.4074C5.11104 14.1869 5.0102 14.2288 4.8256 14.4202C4.08807 15.1851 3.33858 15.938 2.5831 16.6875C2.24467 17.0233 1.8413 17.084 1.44818 16.8926C1.03113 16.6875 0.764486 16.2593 0.785851 15.8277C0.799525 15.5355 0.942245 15.3133 1.14137 15.1133C2.10366 14.1459 3.06254 13.1759 4.02227 12.2076C4.08551 12.1427 4.14533 12.0743 4.23763 11.9743Z" fill="white" />
+                        <path d="M5.03521 8.60511C2.7004 8.59656 0.786073 6.64804 0.798892 4.29273C0.812566 1.91178 2.72861 -0.00596833 5.08648 1.3958e-05C7.44863 0.00599624 9.34502 1.9528 9.33391 4.35854C9.32109 6.70872 7.39394 8.6128 5.03521 8.60511ZM7.15721 4.29786C7.15879 4.02264 7.10595 3.74982 7.00175 3.49508C6.89754 3.24035 6.74402 3.00872 6.55 2.81351C6.35598 2.6183 6.1253 2.46336 5.8712 2.3576C5.61711 2.25183 5.34462 2.19733 5.06939 2.19722C4.79157 2.19695 4.51649 2.25204 4.2602 2.35928C4.00392 2.46651 3.77156 2.62373 3.57672 2.82176C3.38187 3.01979 3.22843 3.25466 3.12537 3.51265C3.0223 3.77064 2.97168 4.04658 2.97644 4.32435C2.97677 4.59968 3.03156 4.87223 3.13765 5.12631C3.24374 5.38038 3.39903 5.61096 3.59459 5.80477C3.79015 5.99859 4.02212 6.15181 4.27713 6.25561C4.53215 6.35941 4.80518 6.41175 5.0805 6.40961C5.35582 6.40861 5.62822 6.35308 5.88196 6.24623C6.13571 6.13937 6.36577 5.9833 6.55885 5.78703C6.75194 5.59077 6.90423 5.35819 7.00693 5.10274C7.10964 4.84729 7.16071 4.57402 7.15721 4.29871V4.29786Z" fill="white" />
+                    </svg>
+                </a>
+
+                <a href="javascript:void(0)">
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.8507 0H5.67113C2.8275 0 0.521484 2.30601 0.521484 5.14965V11.3292C0.521484 14.1729 2.8275 16.4789 5.67113 16.4789H11.8507C14.6943 16.4789 17.0004 14.1729 17.0004 11.3292V5.14965C17.0004 2.30601 14.6943 0 11.8507 0ZM15.4555 11.3292C15.4555 13.317 13.8385 14.934 11.8507 14.934H5.67113C3.68337 14.934 2.06638 13.317 2.06638 11.3292V5.14965C2.06638 3.16188 3.68337 1.54489 5.67113 1.54489H11.8507C13.8385 1.54489 15.4555 3.16188 15.4555 5.14965V11.3292Z" fill="url(#paint0_linear)" />
+                        <path d="M8.76034 4.12012C6.48523 4.12012 4.64062 5.96472 4.64062 8.23984C4.64062 10.5149 6.48523 12.3596 8.76034 12.3596C11.0355 12.3596 12.8801 10.5149 12.8801 8.23984C12.8801 5.96472 11.0355 4.12012 8.76034 4.12012ZM8.76034 10.8147C7.3411 10.8147 6.18552 9.65908 6.18552 8.23984C6.18552 6.81956 7.3411 5.66501 8.76034 5.66501C10.1796 5.66501 11.3352 6.81956 11.3352 8.23984C11.3352 9.65908 10.1796 10.8147 8.76034 10.8147Z" fill="url(#paint1_linear)" />
+                        <path d="M13.1896 4.35962C13.4928 4.35962 13.7385 4.11385 13.7385 3.81067C13.7385 3.50749 13.4928 3.26172 13.1896 3.26172C12.8864 3.26172 12.6406 3.50749 12.6406 3.81067C12.6406 4.11385 12.8864 4.35962 13.1896 4.35962Z" fill="url(#paint2_linear)" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="2.93535" y1="14.0666" x2="14.5865" y2="2.41386" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="0.507" stop-color="white" />
+                                <stop offset="0.99" stop-color="white" />
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="5.84756" y1="11.1534" x2="11.6731" y2="5.32705" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="0.507" stop-color="white" />
+                                <stop offset="0.99" stop-color="white" />
+                            </linearGradient>
+                            <linearGradient id="paint2_linear" x1="12.8014" y1="4.1989" x2="13.5777" y2="3.42254" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" />
+                                <stop offset="0.507" stop-color="white" />
+                                <stop offset="0.99" stop-color="white" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
     <div class="wh js-header">
         <div class="wh__above">
             <div class="wh__above-container container-min">
+                <div class="wh-mobile-burger--button js-burger--button-open">
+                    <span></span>
+                </div>
+
                 <div class="wh__above-info">
+                    <a href="tel:+7 (343) 384 57 89" class="wh__above-info-number wh-mobile-phone">+7 (343) 384 57 89</a>
+
                     <div class="wh__above-info-city js-select">
                         <div class="js-drop-item wh__above-info-city-item">
                             <div class="wh__above-info-city-btn">
@@ -45,7 +168,51 @@
                         </div>
                     </div>
 
-                    <a href="tel:+7 (343) 384 57 89" class="wh__above-info-number">+7 (343) 384 57 89</a>
+                    <div class="wf__bottom-socials">
+                        <a href="javascript:void(0)">
+                            <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.30359 10.8033H10.4398C10.4398 10.8033 10.7832 10.7652 10.9579 10.5763C11.1196 10.4028 11.1136 10.0771 11.1136 10.0771C11.1136 10.0771 11.0911 8.55232 11.7994 8.3277C12.497 8.10664 13.3931 9.8014 14.3427 10.4539C15.0605 10.9471 15.606 10.8389 15.606 10.8389L18.1458 10.8033C18.1458 10.8033 19.4745 10.7213 18.8446 9.67661C18.7935 9.59104 18.4774 8.90411 16.9561 7.49221C15.3636 6.01375 15.5775 6.25382 17.4957 3.69743C18.664 2.14053 19.131 1.18976 18.9849 0.783302C18.8458 0.395861 17.9865 0.498069 17.9865 0.498069L15.1295 0.514708C15.1295 0.514708 14.9179 0.486184 14.7599 0.580073C14.6065 0.672774 14.5079 0.886698 14.5079 0.886698C14.5079 0.886698 14.0551 2.09181 13.4513 3.11627C12.1785 5.27809 11.6686 5.39218 11.4607 5.25789C10.977 4.94532 11.0982 4.00049 11.0982 3.33019C11.0982 1.23492 11.4155 0.361395 10.479 0.135586C10.1676 0.0607126 9.93942 0.0107969 9.14434 0.00247762C8.12463 -0.0082186 7.26062 0.00604302 6.77216 0.244925C6.44652 0.40418 6.19575 0.759532 6.34906 0.779736C6.53803 0.804694 6.96588 0.895018 7.19287 1.20402C7.48643 1.60216 7.47573 2.49826 7.47573 2.49826C7.47573 2.49826 7.64449 4.96433 7.08235 5.27096C6.6961 5.48132 6.16723 5.05228 5.03224 3.09012C4.45108 2.08586 4.01135 0.974645 4.01135 0.974645C4.01135 0.974645 3.92696 0.767852 3.77603 0.657324C3.593 0.523027 3.3363 0.480242 3.3363 0.480242L0.619457 0.496881C0.619457 0.496881 0.211813 0.508766 0.0620657 0.685847C-0.0710428 0.843914 0.0513695 1.16955 0.0513695 1.16955C0.0513695 1.16955 2.17873 6.14567 4.58656 8.65453C6.79593 10.9542 9.30359 10.8033 9.30359 10.8033Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.29749 18V9.55388H0V6.51287H2.29749V3.91545C2.29749 1.87438 3.65463 0 6.78176 0C8.04789 0 8.98413 0.11799 8.98413 0.11799L8.91036 2.95778C8.91036 2.95778 7.95554 2.94874 6.9136 2.94874C5.78591 2.94874 5.60524 3.45391 5.60524 4.29237V6.51287H9L8.85229 9.55388H5.60524V18H2.29749Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.23763 11.9743C2.92922 11.8376 1.749 11.5128 0.738848 10.7172C0.61322 10.618 0.483318 10.5223 0.369655 10.4121C-0.0730343 9.98476 -0.117474 9.49421 0.232917 8.98999C0.532031 8.55755 1.03454 8.44218 1.55671 8.69087C1.65756 8.73788 1.75327 8.79855 1.84643 8.86265C3.72914 10.1651 6.31605 10.201 8.2056 8.92162C8.39361 8.77633 8.59359 8.6584 8.82519 8.59857C9.27643 8.48235 9.6969 8.649 9.93875 9.04639C10.2156 9.49934 10.2122 9.94373 9.87124 10.295C9.34907 10.8359 8.72007 11.2265 8.02186 11.4991C7.36124 11.7572 6.63738 11.8871 5.92207 11.9726C6.02975 12.0914 6.08103 12.1495 6.14854 12.2179C7.12024 13.2007 8.09706 14.1809 9.06619 15.1671C9.39607 15.5038 9.4653 15.92 9.28326 16.3115C9.08414 16.7388 8.63974 17.0199 8.20303 16.99C7.92699 16.9704 7.71163 16.8319 7.51934 16.6379C6.78609 15.8944 6.03915 15.1646 5.32043 14.4074C5.11104 14.1869 5.0102 14.2288 4.8256 14.4202C4.08807 15.1851 3.33858 15.938 2.5831 16.6875C2.24467 17.0233 1.8413 17.084 1.44818 16.8926C1.03113 16.6875 0.764486 16.2593 0.785851 15.8277C0.799525 15.5355 0.942245 15.3133 1.14137 15.1133C2.10366 14.1459 3.06254 13.1759 4.02227 12.2076C4.08551 12.1427 4.14533 12.0743 4.23763 11.9743Z" fill="white" />
+                                <path d="M5.03521 8.60511C2.7004 8.59656 0.786073 6.64804 0.798892 4.29273C0.812566 1.91178 2.72861 -0.00596833 5.08648 1.3958e-05C7.44863 0.00599624 9.34502 1.9528 9.33391 4.35854C9.32109 6.70872 7.39394 8.6128 5.03521 8.60511ZM7.15721 4.29786C7.15879 4.02264 7.10595 3.74982 7.00175 3.49508C6.89754 3.24035 6.74402 3.00872 6.55 2.81351C6.35598 2.6183 6.1253 2.46336 5.8712 2.3576C5.61711 2.25183 5.34462 2.19733 5.06939 2.19722C4.79157 2.19695 4.51649 2.25204 4.2602 2.35928C4.00392 2.46651 3.77156 2.62373 3.57672 2.82176C3.38187 3.01979 3.22843 3.25466 3.12537 3.51265C3.0223 3.77064 2.97168 4.04658 2.97644 4.32435C2.97677 4.59968 3.03156 4.87223 3.13765 5.12631C3.24374 5.38038 3.39903 5.61096 3.59459 5.80477C3.79015 5.99859 4.02212 6.15181 4.27713 6.25561C4.53215 6.35941 4.80518 6.41175 5.0805 6.40961C5.35582 6.40861 5.62822 6.35308 5.88196 6.24623C6.13571 6.13937 6.36577 5.9833 6.55885 5.78703C6.75194 5.59077 6.90423 5.35819 7.00693 5.10274C7.10964 4.84729 7.16071 4.57402 7.15721 4.29871V4.29786Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8507 0H5.67113C2.8275 0 0.521484 2.30601 0.521484 5.14965V11.3292C0.521484 14.1729 2.8275 16.4789 5.67113 16.4789H11.8507C14.6943 16.4789 17.0004 14.1729 17.0004 11.3292V5.14965C17.0004 2.30601 14.6943 0 11.8507 0ZM15.4555 11.3292C15.4555 13.317 13.8385 14.934 11.8507 14.934H5.67113C3.68337 14.934 2.06638 13.317 2.06638 11.3292V5.14965C2.06638 3.16188 3.68337 1.54489 5.67113 1.54489H11.8507C13.8385 1.54489 15.4555 3.16188 15.4555 5.14965V11.3292Z" fill="url(#paint0_linear)" />
+                                <path d="M8.76034 4.12012C6.48523 4.12012 4.64062 5.96472 4.64062 8.23984C4.64062 10.5149 6.48523 12.3596 8.76034 12.3596C11.0355 12.3596 12.8801 10.5149 12.8801 8.23984C12.8801 5.96472 11.0355 4.12012 8.76034 4.12012ZM8.76034 10.8147C7.3411 10.8147 6.18552 9.65908 6.18552 8.23984C6.18552 6.81956 7.3411 5.66501 8.76034 5.66501C10.1796 5.66501 11.3352 6.81956 11.3352 8.23984C11.3352 9.65908 10.1796 10.8147 8.76034 10.8147Z" fill="url(#paint1_linear)" />
+                                <path d="M13.1896 4.35962C13.4928 4.35962 13.7385 4.11385 13.7385 3.81067C13.7385 3.50749 13.4928 3.26172 13.1896 3.26172C12.8864 3.26172 12.6406 3.50749 12.6406 3.81067C12.6406 4.11385 12.8864 4.35962 13.1896 4.35962Z" fill="url(#paint2_linear)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="2.93535" y1="14.0666" x2="14.5865" y2="2.41386" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="5.84756" y1="11.1534" x2="11.6731" y2="5.32705" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear" x1="12.8014" y1="4.1989" x2="13.5777" y2="3.42254" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <a class="wh__above-logo" href="/home.html">
@@ -53,13 +220,17 @@
                     <img class="wh__above-logo-white" src="./assets/images/logo-white-small.png" alt="">
                 </a>
 
-                <div class="wh__above-btn">
-                    <button class="button-primary
+                <div class="row">
+                    <a href="tel:+7 (343) 384 57 89" class="wh__above-info-number">+7 (343) 384 57 89</a>
+
+                    <div class="wh__above-btn">
+                        <button class="button-primary
                 " data-popup="form-feedback">
-                        Оставить заявку
+                            Оставить заявку
 
-                    </button>
+                        </button>
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,6 +254,8 @@
     </div>
 
     <main class="website-workarea">
+
+
 
 
 
@@ -126,133 +299,75 @@
         </div>
 
 
-        <div class="companies-slider">
-            <div class="companies-slider__swiper js-companies-slider">
-                <div class="swiper-wrapper companies-slider__wrapper">
+        <div class="companies">
+            <div class="companies__wrapper">
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p1.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p1-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-11.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p2.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p2-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-10.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p3.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p3-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-9.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p3.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p3-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-8.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p2.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p2-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-7.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p1.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p1-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-6.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p2.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p2-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-5.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p3.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p3-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-4.png" alt="">
+                    </div>
+                </a>
 
-                    <a href="javascript:void(0)" class="swiper-slide companies-slider__slide">
-                        <div class="companies-slider__img-first">
-                            <img src="./assets/images/logo-p1.png" alt="">
-                        </div>
-                        <div class="companies-slider__img-second">
-                            <img src="./assets/images/logo-p1-hover.png" alt="">
-                        </div>
-                    </a>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-3.png" alt="">
+                    </div>
+                </a>
 
-                </div>
-            </div>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-2.png" alt="">
+                    </div>
+                </a>
 
-            <div class="swiper-nav">
-                <div class="swiper-nav__prev js-companies-slider-prev">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                        <g filter="url(#filter0_i)">
-                            <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"></path>
-                        </g>
-                        <defs>
-                            <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                                <feOffset dy="4"></feOffset>
-                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
-                            </filter>
-                        </defs>
-                    </svg>
-                </div>
-                <div class="swiper-nav__next js-companies-slider-next">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                        <g filter="url(#filter0_i)">
-                            <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292"></path>
-                        </g>
-                        <defs>
-                            <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
-                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-                                <feOffset dy="4"></feOffset>
-                                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"></feComposite>
-                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"></feColorMatrix>
-                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow"></feBlend>
-                            </filter>
-                        </defs>
-                    </svg>
-                </div>
+                <a href="javascript:void(0)" class="companies__item">
+                    <div class="companies__item-shown">
+                        <img src="./assets/images/comp-1.png" alt="">
+                    </div>
+                </a>
+
             </div>
         </div>
 
@@ -269,62 +384,12 @@
 
 
 
-        <div class="default-banner default-banner_slider">
 
 
-            <div class="js-back-slider">
-                <div class="default-banner__backSlider js-back-slider-swiper">
-                    <div class="swiper-wrapper">
 
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-1.png" alt="">
-                        </div>
 
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-2.png" alt="">
-                        </div>
+        <div class="default-banner default-banner_slider" style="background-image: url(./assets/images/default-banner.png);">
 
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-3.png" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-4.png" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-1.png" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-2.png" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-3.png" alt="">
-                        </div>
-
-                        <div class="swiper-slide">
-                            <img src="./assets/images/catalog-4.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="default-banner__backSlider-controls js-back-slider-controls">
-                    <span class="prev">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-                            <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z" fill="white" />
-                        </svg>
-                    </span>
-
-                    <span class="next">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-                            <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z" fill="white" />
-                        </svg>
-                    </span>
-                </div>
-            </div>
 
 
 
@@ -332,31 +397,44 @@
 
 
 
-                <div class="default-banner__text">
-                    <div class="default-banner__title">Каталог</div>
-                    <div class="default-banner__descr">Лид — аннотация, «шапка» статьи, новости или пресс-релиза.
-                        <br />Состоит из одного первого выделенного абзаца, в котором коротко формулируется проблема,
-                        раскрывается суть заголовка. Размер лида обычно не превышает 3-5 строк.
-                    </div>
-                </div>
 
 
 
 
 
-                <div class="default-banner__left-text">
-                    ФОТОГРАФИИ СДЕЛАНЫ
-                    В МАГАЗИНЕ <span>КЕРАМИР</span>
-                </div>
+
+
+
+
 
 
 
                 <div class="default-banner__slider js-banner-slider">
-                    <button class="default-banner__slider-toggle js-banner-slider-toggle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="61" height="29" viewBox="0 0 61 29" fill="none">
-                            <path d="M30.5 29C30.04 29 29.5799 28.8233 29.2349 28.5582L0.368182 2.05008C-0.206852 1.51992 -0.0918457 0.724678 0.598196 0.282876C1.28824 -0.158926 2.3233 -0.0705655 2.89834 0.459597L30.5 25.819L58.1017 0.459597C58.6767 -0.0705655 59.7118 -0.158926 60.4018 0.282876C61.0918 0.724678 61.2069 1.51992 60.6318 2.05008L31.7651 28.5582C31.4201 28.8233 30.96 29 30.5 29Z" fill="white" />
-                        </svg>
-                    </button>
+                    <div class="default-banner__slider-row-nav">
+                        <button class="default-banner__slider-toggle js-banner-slider-toggle">
+                            <i>
+                                <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.2857 25.3936L22.0179 19.1257L15.75 25.3936" stroke="#020202" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </i>
+
+                            <span>Коллекции</span>
+                        </button>
+
+                        <div class="default-banner__backSlider-controls js-slider-controls">
+                            <span class="prev">
+                                <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.6533 20.0577L1.11225 10.5167L10.6533 0.975586" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+
+                            <span class="next">
+                                <svg width="12" height="21" viewBox="0 0 12 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.05591 19.8136L10.597 10.2725L1.05591 0.731445" stroke="white" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
 
                     <div class="default-banner__slider-content js-banner-slider-content">
                         <div class="default-banner__slider-container">
@@ -368,12 +446,14 @@
                                             <img src="./assets/images/catalog-1.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 1
+                                            </div>
                                         </div>
                                     </a>
 
@@ -382,12 +462,14 @@
                                             <img src="./assets/images/catalog-2.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 2
+                                            </div>
                                         </div>
                                     </a>
 
@@ -396,12 +478,14 @@
                                             <img src="./assets/images/catalog-3.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 3
+                                            </div>
                                         </div>
                                     </a>
 
@@ -410,12 +494,14 @@
                                             <img src="./assets/images/catalog-4.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 4
+                                            </div>
                                         </div>
                                     </a>
 
@@ -424,12 +510,14 @@
                                             <img src="./assets/images/catalog-1.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 1
+                                            </div>
                                         </div>
                                     </a>
 
@@ -438,12 +526,14 @@
                                             <img src="./assets/images/catalog-2.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 2
+                                            </div>
                                         </div>
                                     </a>
 
@@ -452,12 +542,14 @@
                                             <img src="./assets/images/catalog-3.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 3
+                                            </div>
                                         </div>
                                     </a>
 
@@ -466,58 +558,19 @@
                                             <img src="./assets/images/catalog-4.png" alt="">
                                         </div>
 
-                                        <div class="default-banner__slide-builder">
-                                            Производитель
-                                        </div>
+                                        <div class="default-banner__slide-content">
+                                            <div class="default-banner__slide-builder">
+                                                Производитель
+                                            </div>
 
-                                        <div class="default-banner__slide-name">
-                                            Name of the collection
+                                            <div class="default-banner__slide-name">
+                                                Name of the collection - 4
+                                            </div>
                                         </div>
                                     </a>
 
                                 </div>
 
-                            </div>
-                        </div>
-
-                        <div class="swiper-nav">
-                            <div class="swiper-nav__prev">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                                    <g filter="url(#filter0_i)">
-                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset dy="4" />
-                                            <feGaussianBlur stdDeviation="2" />
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                        </filter>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <div class="swiper-nav__next">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="46" height="97" viewBox="0 0 46 97" fill="none">
-                                    <g filter="url(#filter0_i)">
-                                        <path d="M0 48.5C0 47.7685 0.280319 47.037 0.700794 46.4883L42.7481 0.58547C43.5891 -0.328929 44.8505 -0.14605 45.5513 0.951229C46.2521 2.04851 46.1119 3.69443 45.271 4.60883L5.04568 48.5L45.271 92.3912C46.1119 93.3056 46.2521 94.9515 45.5513 96.0488C44.8505 97.146 43.5891 97.3289 42.7481 96.4145L0.700794 50.5117C0.280319 49.963 0 49.2315 0 48.5Z" fill="#939292" />
-                                    </g>
-                                    <defs>
-                                        <filter id="filter0_i" x="0" y="0" width="46" height="101" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
-                                            <feOffset dy="4" />
-                                            <feGaussianBlur stdDeviation="2" />
-                                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow" />
-                                        </filter>
-                                    </defs>
-                                </svg>
                             </div>
                         </div>
                     </div>
@@ -747,7 +800,9 @@
 
 
 
-            <div class="default-banner">
+
+
+            <div class="default-banner with-content">
 
 
                 <div class="js-back-slider">
@@ -789,19 +844,7 @@
                         </div>
                     </div>
 
-                    <div class="default-banner__backSlider-controls js-back-slider-controls">
-                        <span class="prev">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-                                <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z" fill="white" />
-                            </svg>
-                        </span>
 
-                        <span class="next">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="29" viewBox="0 0 11 29" fill="none">
-                                <path d="M11 14.5C11 14.7187 10.933 14.9374 10.8324 15.1014L0.777618 28.825C0.576522 29.0983 0.274878 29.0437 0.107298 28.7156C-0.0602822 28.3876 -0.0267662 27.8955 0.17433 27.6221L9.79342 14.5L0.17433 1.3779C-0.0267662 1.10452 -0.0602822 0.61244 0.107298 0.284388C0.274878 -0.0436649 0.576522 -0.0983391 0.777618 0.175037L10.8324 13.8986C10.933 14.0626 11 14.2813 11 14.5Z" fill="white" />
-                            </svg>
-                        </span>
-                    </div>
                 </div>
 
 
@@ -825,8 +868,6 @@
 
 
 
-
-
                 </div>
 
 
@@ -835,7 +876,7 @@
 
         </div>
         <div class="home__indent home-center">
-            <div class="block-title block-title_big">
+            <div class="block-title">
                 МАГАЗИНЫ
             </div>
 
@@ -916,7 +957,7 @@
 
         <div class="home__indent">
             <div class="container-min home-center">
-                <div class="block-title block-title_big">
+                <div class="block-title">
                     ЗАГОЛОВОК РАЗДЕЛА
                 </div>
 
@@ -948,6 +989,8 @@
 
 
 
+
+
             <div class="default-banner" style="background-image: url(./assets/images/3d-banner.png);">
 
 
@@ -956,7 +999,7 @@
                 <div class="default-banner__content">
 
                     <div class="default-banner__3d">
-                        <div class="block-title block-title_big">
+                        <div class="block-title">
                             3D ДИЗАЙН ПРОЕКТ - БЕСПЛАТНО
                         </div>
 
@@ -983,8 +1026,6 @@
 
 
 
-
-
                 </div>
 
 
@@ -995,7 +1036,7 @@
 
         <div class="home__indent">
             <div class="container-min home-center">
-                <div class="block-title block-title_big">
+                <div class="block-title">
                     ЗАГОЛОВОК РАЗДЕЛА
                 </div>
 
@@ -1030,73 +1071,105 @@
                         <img src="./assets/images/new-logo-white.png" alt="">
                     </div>
 
+                    <div class="wf__bottom-socials">
+                        <a href="javascript:void(0)">
+                            <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.30359 10.8033H10.4398C10.4398 10.8033 10.7832 10.7652 10.9579 10.5763C11.1196 10.4028 11.1136 10.0771 11.1136 10.0771C11.1136 10.0771 11.0911 8.55232 11.7994 8.3277C12.497 8.10664 13.3931 9.8014 14.3427 10.4539C15.0605 10.9471 15.606 10.8389 15.606 10.8389L18.1458 10.8033C18.1458 10.8033 19.4745 10.7213 18.8446 9.67661C18.7935 9.59104 18.4774 8.90411 16.9561 7.49221C15.3636 6.01375 15.5775 6.25382 17.4957 3.69743C18.664 2.14053 19.131 1.18976 18.9849 0.783302C18.8458 0.395861 17.9865 0.498069 17.9865 0.498069L15.1295 0.514708C15.1295 0.514708 14.9179 0.486184 14.7599 0.580073C14.6065 0.672774 14.5079 0.886698 14.5079 0.886698C14.5079 0.886698 14.0551 2.09181 13.4513 3.11627C12.1785 5.27809 11.6686 5.39218 11.4607 5.25789C10.977 4.94532 11.0982 4.00049 11.0982 3.33019C11.0982 1.23492 11.4155 0.361395 10.479 0.135586C10.1676 0.0607126 9.93942 0.0107969 9.14434 0.00247762C8.12463 -0.0082186 7.26062 0.00604302 6.77216 0.244925C6.44652 0.40418 6.19575 0.759532 6.34906 0.779736C6.53803 0.804694 6.96588 0.895018 7.19287 1.20402C7.48643 1.60216 7.47573 2.49826 7.47573 2.49826C7.47573 2.49826 7.64449 4.96433 7.08235 5.27096C6.6961 5.48132 6.16723 5.05228 5.03224 3.09012C4.45108 2.08586 4.01135 0.974645 4.01135 0.974645C4.01135 0.974645 3.92696 0.767852 3.77603 0.657324C3.593 0.523027 3.3363 0.480242 3.3363 0.480242L0.619457 0.496881C0.619457 0.496881 0.211813 0.508766 0.0620657 0.685847C-0.0710428 0.843914 0.0513695 1.16955 0.0513695 1.16955C0.0513695 1.16955 2.17873 6.14567 4.58656 8.65453C6.79593 10.9542 9.30359 10.8033 9.30359 10.8033Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.29749 18V9.55388H0V6.51287H2.29749V3.91545C2.29749 1.87438 3.65463 0 6.78176 0C8.04789 0 8.98413 0.11799 8.98413 0.11799L8.91036 2.95778C8.91036 2.95778 7.95554 2.94874 6.9136 2.94874C5.78591 2.94874 5.60524 3.45391 5.60524 4.29237V6.51287H9L8.85229 9.55388H5.60524V18H2.29749Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.23763 11.9743C2.92922 11.8376 1.749 11.5128 0.738848 10.7172C0.61322 10.618 0.483318 10.5223 0.369655 10.4121C-0.0730343 9.98476 -0.117474 9.49421 0.232917 8.98999C0.532031 8.55755 1.03454 8.44218 1.55671 8.69087C1.65756 8.73788 1.75327 8.79855 1.84643 8.86265C3.72914 10.1651 6.31605 10.201 8.2056 8.92162C8.39361 8.77633 8.59359 8.6584 8.82519 8.59857C9.27643 8.48235 9.6969 8.649 9.93875 9.04639C10.2156 9.49934 10.2122 9.94373 9.87124 10.295C9.34907 10.8359 8.72007 11.2265 8.02186 11.4991C7.36124 11.7572 6.63738 11.8871 5.92207 11.9726C6.02975 12.0914 6.08103 12.1495 6.14854 12.2179C7.12024 13.2007 8.09706 14.1809 9.06619 15.1671C9.39607 15.5038 9.4653 15.92 9.28326 16.3115C9.08414 16.7388 8.63974 17.0199 8.20303 16.99C7.92699 16.9704 7.71163 16.8319 7.51934 16.6379C6.78609 15.8944 6.03915 15.1646 5.32043 14.4074C5.11104 14.1869 5.0102 14.2288 4.8256 14.4202C4.08807 15.1851 3.33858 15.938 2.5831 16.6875C2.24467 17.0233 1.8413 17.084 1.44818 16.8926C1.03113 16.6875 0.764486 16.2593 0.785851 15.8277C0.799525 15.5355 0.942245 15.3133 1.14137 15.1133C2.10366 14.1459 3.06254 13.1759 4.02227 12.2076C4.08551 12.1427 4.14533 12.0743 4.23763 11.9743Z" fill="white" />
+                                <path d="M5.03521 8.60511C2.7004 8.59656 0.786073 6.64804 0.798892 4.29273C0.812566 1.91178 2.72861 -0.00596833 5.08648 1.3958e-05C7.44863 0.00599624 9.34502 1.9528 9.33391 4.35854C9.32109 6.70872 7.39394 8.6128 5.03521 8.60511ZM7.15721 4.29786C7.15879 4.02264 7.10595 3.74982 7.00175 3.49508C6.89754 3.24035 6.74402 3.00872 6.55 2.81351C6.35598 2.6183 6.1253 2.46336 5.8712 2.3576C5.61711 2.25183 5.34462 2.19733 5.06939 2.19722C4.79157 2.19695 4.51649 2.25204 4.2602 2.35928C4.00392 2.46651 3.77156 2.62373 3.57672 2.82176C3.38187 3.01979 3.22843 3.25466 3.12537 3.51265C3.0223 3.77064 2.97168 4.04658 2.97644 4.32435C2.97677 4.59968 3.03156 4.87223 3.13765 5.12631C3.24374 5.38038 3.39903 5.61096 3.59459 5.80477C3.79015 5.99859 4.02212 6.15181 4.27713 6.25561C4.53215 6.35941 4.80518 6.41175 5.0805 6.40961C5.35582 6.40861 5.62822 6.35308 5.88196 6.24623C6.13571 6.13937 6.36577 5.9833 6.55885 5.78703C6.75194 5.59077 6.90423 5.35819 7.00693 5.10274C7.10964 4.84729 7.16071 4.57402 7.15721 4.29871V4.29786Z" fill="white" />
+                            </svg>
+                        </a>
+
+                        <a href="javascript:void(0)">
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8507 0H5.67113C2.8275 0 0.521484 2.30601 0.521484 5.14965V11.3292C0.521484 14.1729 2.8275 16.4789 5.67113 16.4789H11.8507C14.6943 16.4789 17.0004 14.1729 17.0004 11.3292V5.14965C17.0004 2.30601 14.6943 0 11.8507 0ZM15.4555 11.3292C15.4555 13.317 13.8385 14.934 11.8507 14.934H5.67113C3.68337 14.934 2.06638 13.317 2.06638 11.3292V5.14965C2.06638 3.16188 3.68337 1.54489 5.67113 1.54489H11.8507C13.8385 1.54489 15.4555 3.16188 15.4555 5.14965V11.3292Z" fill="url(#paint0_linear)" />
+                                <path d="M8.76034 4.12012C6.48523 4.12012 4.64062 5.96472 4.64062 8.23984C4.64062 10.5149 6.48523 12.3596 8.76034 12.3596C11.0355 12.3596 12.8801 10.5149 12.8801 8.23984C12.8801 5.96472 11.0355 4.12012 8.76034 4.12012ZM8.76034 10.8147C7.3411 10.8147 6.18552 9.65908 6.18552 8.23984C6.18552 6.81956 7.3411 5.66501 8.76034 5.66501C10.1796 5.66501 11.3352 6.81956 11.3352 8.23984C11.3352 9.65908 10.1796 10.8147 8.76034 10.8147Z" fill="url(#paint1_linear)" />
+                                <path d="M13.1896 4.35962C13.4928 4.35962 13.7385 4.11385 13.7385 3.81067C13.7385 3.50749 13.4928 3.26172 13.1896 3.26172C12.8864 3.26172 12.6406 3.50749 12.6406 3.81067C12.6406 4.11385 12.8864 4.35962 13.1896 4.35962Z" fill="url(#paint2_linear)" />
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="2.93535" y1="14.0666" x2="14.5865" y2="2.41386" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="5.84756" y1="11.1534" x2="11.6731" y2="5.32705" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                    <linearGradient id="paint2_linear" x1="12.8014" y1="4.1989" x2="13.5777" y2="3.42254" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="white" />
+                                        <stop offset="0.507" stop-color="white" />
+                                        <stop offset="0.99" stop-color="white" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="wf-wrapper">
                     <ul class="wf__nav-list">
                         <li class="wf__nav-item"><a href="javascript:void(0)">Магазины</a></li>
                         <li class="wf__nav-item"><a href="javascript:void(0)">Каталог</a></li>
                         <li class="wf__nav-item"><a href="javascript:void(0)">Сотрудничество</a></li>
                         <li class="wf__nav-item"><a href="javascript:void(0)">О компании</a></li>
                     </ul>
-                </div>
 
-                <div class="wf__place">
-                    <div class="wf__place-item">
-                        <div class="wf__place-title">ЕКАТРЕИНБУРГ</div>
+                    <div class="wf__place">
+                        <div class="wf__place-item">
+                            <div class="wf__place-title">ЕКАТРЕИНБУРГ</div>
 
-                        <div class="wh__place-item-wrapper">
-                            <div class="wf__place-address">
-                                <span>ул. Бахчиванджи, 2 лит В5</span>
-                                <span>пн-вс 9:00 - 19:00</span>
-                                <a href="tel:+7 (343) 318 24 91">+7 (343) 318 24 91</a>
+                            <div class="wh__place-item-wrapper">
+                                <div class="wf__place-address">
+                                    <span>ул. Бахчиванджи, 2 лит В5</span>
+                                    <span>пн-вс 9:00 - 19:00</span>
+                                    <a href="tel:+7 (343) 318 24 91">+7 (343) 318 24 91</a>
+                                </div>
+                                <div class="wf__place-address">
+                                    <span>Первомайская, 56</span>
+                                    <span>10:00 - 20:00</span>
+                                    <a href="tel:+7 (343) 318 24 60">+7 (343) 318 24 60</a>
+                                </div>
                             </div>
-                            <div class="wf__place-address">
-                                <span>Первомайская, 56</span>
-                                <span>10:00 - 20:00</span>
-                                <a href="tel:+7 (343) 318 24 60">+7 (343) 318 24 60</a>
+                        </div>
+                        <div class="wf__place-item">
+                            <div class="wf__place-title">УФА</div>
+
+                            <div class="wh__place-item-wrapper">
+                                <div class="wf__place-address">
+                                    <span>ул. Комсомольская, 15</span>
+                                    <span>пн-вс 10:00 - 20:00</span>
+                                    <a href="tel:+7 (343) 318 24 91">+7 (343) 318 24 91</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wf__place-item">
+                            <div class="wf__place-title">&nbsp;</div>
+
+                            <div class="wh__place-item-wrapper">
+                                <div class="wf__place-address">
+                                    <b>Скоро <br />на 1 КераМир <br />будет больше</b>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="wf__place-item">
-                        <div class="wf__place-title">УФА</div>
-
-                        <div class="wh__place-item-wrapper">
-                            <div class="wf__place-address">
-                                <span>ул. Комсомольская, 15</span>
-                                <span>пн-вс 10:00 - 20:00</span>
-                                <a href="tel:+7 (343) 318 24 91">+7 (343) 318 24 91</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="wf__place-item">
-                        <div class="wf__place-title">&nbsp;</div>
-
-                        <div class="wh__place-item-wrapper">
-                            <div class="wf__place-address">
-                                <b>Скоро <br />на 1 КераМир <br />будет больше</b>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="wf__bottom">
-                <div class="wf__bottom-socials">
-                    <a href="javascript:void(0)">
-                        <img src="./assets/images/vk-icon.png" alt="">
-                    </a>
-
-                    <a href="javascript:void(0)">
-                        <img src="./assets/images/facebook-icon.png" alt="">
-                    </a>
-
-                    <a href="javascript:void(0)">
-                        <img src="./assets/images/youtube-icon.png" alt="">
-                    </a>
-
-                    <a href="javascript:void(0)">
-                        <img src="./assets/images/insta-icon.png" alt="">
-                    </a>
                 </div>
             </div>
+        </div>
+
+        <div class="wf__bottom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dictumst turpis quis in volutpat laoreet
         </div>
     </footer>
     <div class="form-feedback-popup js-form-feedback">

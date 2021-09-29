@@ -1561,8 +1561,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       try {
         for (_iterator.s(); !(_step = _iterator.n()).done;) {
           var swiperContent = _step.value;
-          var prev = swiperContent.querySelector('.js-back-slider-controls .prev');
-          var next = swiperContent.querySelector('.js-back-slider-controls .next');
+          var prev = document.querySelector('.js-back-slider-controls .prev');
+          var next = document.querySelector('.js-back-slider-controls .next');
           var swiper = swiperContent.querySelector('.js-back-slider-swiper');
 
           if (swiper) {
@@ -1624,10 +1624,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           });
           new Swiper(swiper, {
             slidesPerView: 'auto',
-            spaceBetween: 40,
             navigation: {
-              prevEl: ".swiper-nav__prev",
-              nextEl: ".swiper-nav__next"
+              prevEl: ".js-slider-controls .prev",
+              nextEl: ".js-slider-controls .next"
             }
           });
         };
@@ -1640,6 +1639,27 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } finally {
         _iterator.f();
       }
+    }
+  });
+})();
+"use strict";
+
+/*BURGER MENU*/
+;
+
+(function () {
+  window.addEventListener('load', function () {
+    var menu = document.querySelector('.js-burger--menu');
+    var buttonOpen = document.querySelector('.js-burger--button-open');
+    var buttonClose = document.querySelector('.js-burger--button-close');
+
+    if (menu) {
+      buttonOpen === null || buttonOpen === void 0 ? void 0 : buttonOpen.addEventListener('click', function () {
+        menu.classList.add('active');
+      });
+      buttonClose === null || buttonClose === void 0 ? void 0 : buttonClose.addEventListener('click', function () {
+        menu.classList.remove('active');
+      });
     }
   });
 })();
@@ -1671,7 +1691,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 ;
 
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     var header = document.querySelector('.js-header');
 
     if (header) {
@@ -1702,7 +1722,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 ;
 
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     var preview = document.querySelector('.js-preview');
 
     if (preview) {
@@ -1785,7 +1805,7 @@ legancy.scrollTop = function (options) {
 ;
 
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('load', function () {
     var shops = document.querySelector('.shops');
 
     if (shops) {
