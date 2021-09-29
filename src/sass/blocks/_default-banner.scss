@@ -190,8 +190,9 @@
 .default-banner_slider {
   padding-bottom: 0;
 
-  @include bp-mobile() {
-    height: 36.5rem;
+  @include bp-tablet() {
+    height: 33.5rem;
+    overflow: visible;
   }
 }
 
@@ -200,6 +201,67 @@
   bottom: 0;
   width: 100%;
   left: 0;
+
+  &.active {
+    .default-banner__backSlider-controls {
+      span {
+        background-color: #ffffff;
+        border-color: #AEAEAE;
+        min-width: 4.5rem;
+        max-width: 4.5rem;
+        min-height: 4.5rem;
+        max-height: 4.5rem;
+
+        svg {
+          width: 6px;
+          height: 13px;
+
+          path {
+            stroke: #000000;
+          }
+        }
+      }
+    }
+
+    .default-banner__backSlider-controls {
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .default-banner__active-text {
+      opacity: 1;
+    }
+  }
+}
+
+.default-banner__controls-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.default-banner__active-text {
+  opacity: 0;
+  transition: 0.2s;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+
+  color: #FFFFFF;
+  margin-left: 5.3rem;
+  margin-top: 0.5rem;
+
+  @include bp-tablet() {
+    color: #000000;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: -7.5rem;
+    text-align: center;
+  }
 }
 
 .default-banner__slider-row-nav {
@@ -226,6 +288,7 @@
       align-items: center;
       justify-content: center;
       border: 1px solid #ffffff;
+      transition: 0.2s;
 
       &.prev {
         svg {
@@ -263,13 +326,33 @@
     }
 
     @include bp-tablet() {
-      margin-right: 5%;
+      margin-right: 0;
+      padding-bottom: 2.5rem;
+      
+      span {
+        background-color: #ffffff;
+        border-color: #AEAEAE;
+        min-width: 4.5rem;
+        max-width: 4.5rem;
+        min-height: 4.5rem;
+        max-height: 4.5rem;
+
+        svg {
+          width: 6px;
+          height: 13px;
+
+          path {
+            stroke: #000000;
+          }
+        }
+      }
     }
   }
 
   @include bp-tablet() {
     justify-content: flex-end;
     background-color: #ffffff;
+    position: relative;
   }
 }
 
@@ -297,19 +380,6 @@
   &.active {
     svg {                                                                                 
         transform: rotate(180deg);
-    }
-
-    & + .default-banner__backSlider-controls {
-      span {
-        background-color: #ffffff;
-        border-color: #AEAEAE;
-
-        svg {
-          path {
-            stroke: #000000;
-          }
-        }
-      }
     }
   }
 
@@ -361,16 +431,49 @@
   opacity: 0;
   height: 0;
   overflow: hidden;
-  background: red;
+  background: rgba(#202020, 0.7);
+  display: flex;
+  transition: 0.2s;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+
+  .default-banner__slide-builder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    color: #EFFF00;
+  }
+
+  .default-banner__slide-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 38px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    @include bp-tablet() {
+      font-size: 2rem;
+      line-height: 2.2rem;
+    }
+  }
 }
 
 .default-banner__slider-swiper {
   overflow: hidden;
+  background-color: #000000;
 
   .default-banner__slide {
     display: flex;
@@ -382,13 +485,13 @@
     overflow: hidden;
     min-width: 34rem;
     position: relative;
-    margin-right: 0 !important;
 
     &:hover {
       text-decoration: none;
 
       .default-banner__slide-content {
         height: 100%;
+        opacity: 1;
       }
     }
 
@@ -402,22 +505,11 @@
         object-fit: cover;
       }
     }
-
-    &-builder {
-      font-size: 1.4rem;
-      color: map_get($basic, primary);
-    }
-
-    &-name {
-      color: map_get($basic, primary);
-      font-size: 2.4rem;
-      line-height: 2.8rem;
-      transition: 0.2s;
-    }
   }
 
   .swiper-wrapper {
     display: flex;
+    background-color: #000000;
   }
 }
 

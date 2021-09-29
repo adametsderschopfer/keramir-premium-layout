@@ -54,6 +54,10 @@ body {
   text-align: center;
   color: #343434;
 
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
   &_big {
     margin-right: auto;
     margin-left: auto;
@@ -88,7 +92,7 @@ body {
     position: absolute;
     height: 100%;
     width: 1px;
-    background-color: map_get($basic, primary);
+    background-color: #d1d1d1;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -228,13 +232,17 @@ button {
   padding: 0 2rem;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .container-min {
   width: 100%;
   min-width: 320px;
   margin: auto;
   padding: 0 2rem;
 
-  max-width: 1526px;
+  max-width: 1144px;
 }
 
 .visible-m {

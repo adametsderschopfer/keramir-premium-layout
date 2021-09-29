@@ -23,6 +23,11 @@
 .cooperation__humans {
   display: flex;
   justify-content: space-between;
+  width: 70%;
+
+  @include bp-tablet() {
+    width: 100%;
+  }
 }
 
 .cooperation__human {
@@ -43,6 +48,7 @@
   line-height: 1.8rem;
   font-weight: bold;
   text-align: center;
+  color: #343434;
 
   @include bp-tablet() {
     font-size: 2.8rem;
@@ -72,8 +78,7 @@
 
 .cooperation__human-link {
   font-size: 2.4rem;
-  line-height: 1.8rem;
-  margin-bottom: 1.5rem;
+  line-height: 3.2rem;
   color: map_get($basic, primary);
   display: flex;
   align-items: center;
@@ -86,8 +91,8 @@
   }
 
   @include bp-tablet() {
-    font-size: 1.3rem;
-
+    font-size: 1.8rem;
+    
     svg {
       width: 1.8rem;
       height: 1.8rem;

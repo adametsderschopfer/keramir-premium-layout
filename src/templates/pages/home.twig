@@ -4,13 +4,30 @@
 
 {% include "../blocks/companies-slider.twig" %}
 
- {% include "../blocks/default-banner.twig" with {
-     isCatalog: true,
-     isText: true,
-     isSlider: true,
-     noMouse: true,
-     isMain: true
- } %}
+<div class="home__indent home__only-mobile home-center">
+    <div class="block-title uppercase">
+        Каталог
+    </div>
+
+    <div class="block-descr">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. A malesuada ullamcorper quis dis adipiscing. Nulla cras
+        pretium libero in velit, fringilla elit
+    </div>
+
+    {% include "../UI/button.twig" with {
+        text: 'Перейти',
+        colorClass: "_center wide",
+        href: './catalog.html'
+    } %}
+</div>
+
+{% include "../blocks/default-banner.twig" with {
+    isCatalog: true,
+    isText: true,
+    isSlider: true,
+    noMouse: true,
+    isMain: true
+} %}
 
 {% include "../blocks/workWithUs.twig" %}
 

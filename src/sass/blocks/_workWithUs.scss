@@ -43,6 +43,7 @@
 
   @include bp-desktop() {
     justify-content: center;
+    padding-bottom: 7rem;
   }
 }
 
@@ -117,7 +118,7 @@
   }
 
   @include bp-tablet() {
-    grid-template-columns: repeat(1, calc(100vw));
+    grid-template-columns: repeat(1, calc(100vw - 8rem));
   }
 }
 
@@ -144,7 +145,7 @@
     max-width: 24rem;
 
     @include bp-tablet() {
-      min-width: calc(100vw);
+      min-width: calc(100vw - 8rem);
     }
   }
 
@@ -153,7 +154,7 @@
     max-width: 24rem;
 
     @include bp-tablet() {
-      min-width: calc(100vw);
+      min-width: calc(100vw - 8rem);
     }
   }
 

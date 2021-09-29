@@ -19,6 +19,10 @@
     line-height: 3.4rem;
     max-width: 39rem;
 
+    &.wide {
+      width: 100%;
+    }
+
     &.sm {
       padding: 1.6rem;
     }

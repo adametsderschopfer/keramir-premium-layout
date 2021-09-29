@@ -78,7 +78,7 @@
   }
 
   @include bp-tablet() {
-    width: 100%;
+    width: calc(100% + 4rem);
     height: 24rem;
     margin-right: 0;
     margin-bottom: 2.5rem;
@@ -89,6 +89,7 @@
   max-width: 61rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
   i {
     font-size: 2.4rem;
@@ -105,13 +106,13 @@
 .about__info-name {
   font-size: 3.6rem;
   line-height: 3.2rem;
-  margin-top: auto;
+  margin-top: 2rem;
   font-weight: bold;
 }
 
 .about__info-who {
-  font-size: 2.4rem;
-  line-height: 2.8rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
   font-weight: 300;
   margin-top: 2rem;
 }

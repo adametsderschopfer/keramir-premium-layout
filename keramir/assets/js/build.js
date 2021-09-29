@@ -1618,12 +1618,18 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           var content = bSlider.querySelector('.js-banner-slider-content');
           toggle.addEventListener('click', function () {
             var isActive = !!toggle.classList.contains('active');
+            bSlider.classList[isActive ? 'add' : 'remove']('active');
             toggle.classList[isActive ? 'add' : 'remove']('active');
             content.classList[isActive ? 'add' : 'remove']('active');
             content.style.height = isActive ? content.scrollHeight + 'px' : '0';
           });
           new Swiper(swiper, {
             slidesPerView: 'auto',
+            spaceBetween: 15,
+            allowTouchMove: false,
+            simulateTouch: false,
+            touchMoveStopPropagation: true,
+            touchStartPreventDefault: false,
             navigation: {
               prevEl: ".js-slider-controls .prev",
               nextEl: ".js-slider-controls .next"

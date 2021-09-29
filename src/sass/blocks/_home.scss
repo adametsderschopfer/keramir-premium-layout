@@ -135,3 +135,16 @@
     object-fit: contain;
   }
 }
+
+.home__only-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2rem;
+  margin-bottom: 15rem;
+
+  @include bp-tablet(min) {
+    display: none;
+  }
+}
