@@ -5,6 +5,7 @@
         if (bSliders.length) {
             for (const bSlider of bSliders) {
                 const swiper = bSlider.querySelector('.js-banner-slider-swiper');
+                const bannerSliderBig = bSlider.closest('.js-banner-slider-big');
                 const toggle = bSlider.querySelector('.js-banner-slider-toggle');
                 const content = bSlider.querySelector('.js-banner-slider-content');
 
@@ -19,7 +20,6 @@
 
                 new Swiper(swiper, {
                     slidesPerView: 'auto',
-                    spaceBetween: 15,
                     allowTouchMove: false,
                     simulateTouch: false,
                     touchMoveStopPropagation: true,
@@ -27,6 +27,19 @@
                     navigation: {
                         prevEl: ".js-slider-controls .prev",
                         nextEl: ".js-slider-controls .next"
+                    },
+                    on: {
+                        slideChange({slides, realIndex}) {
+                            const curr = slides[realIndex];
+                            if (curr.dataset.background) {
+                                bannerSliderBig.style.backgroundImage = `url(${curr.dataset.background})`;
+                            }
+                        }
+                    },
+                    breakpoints: {
+                        599: {
+                            spaceBetween: 15,
+                        }
                     }
                 });
             }

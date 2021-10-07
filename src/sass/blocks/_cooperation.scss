@@ -36,16 +36,25 @@
   align-items: center;
   justify-content: center;
   max-width: 43.2rem;
-  padding: 0.2rem;
+  padding: 0.2rem 1rem;
+
+  @include bp-desktop() {
+    padding: 0.2rem 2rem;
+  }
 
   @include bp-tablet() {
     margin-bottom: 4.5rem;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #d1d1d1;
+      padding-bottom: 3rem;
+    }
   }
 }
 
 .cooperation__human-name {
   font-size: 3.6rem;
-  line-height: 1.8rem;
+  line-height: 3.2rem;
   font-weight: bold;
   text-align: center;
   color: #343434;

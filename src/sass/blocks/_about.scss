@@ -27,15 +27,18 @@
     ul {
       display: flex;
       flex-direction: column;
-      padding-left: 4.5rem;
-      padding-right: 4.5rem;
+      padding-left: 6.5rem;
+      padding-right: 6.5rem;
 
       li { 
         list-style: disc;
         font-size: 2.4rem;
         line-height: 3.6rem;
-        margin-bottom: 2.5rem;
         font-weight: 300;
+
+        &:not(:last-of-type) {
+          margin-bottom: 2.5rem;
+        }
 
         @include bp-tablet() {
           font-size: 1.8rem;
@@ -67,7 +70,7 @@
 }
 
 .about__info-img {
-  width: 72.5rem;
+  width: 50%;
   height: 48.5rem;
   margin-right: 2.5rem;
 
@@ -86,7 +89,7 @@
 }
 
 .about__info-text {
-  max-width: 61rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,6 +103,10 @@
     @include bp-tablet() {
       font-size: 1.8rem;
     }
+  }
+
+  @include bp-tablet() {
+    width: 100%;
   }
 }
 

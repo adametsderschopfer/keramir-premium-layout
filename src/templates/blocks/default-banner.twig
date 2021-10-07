@@ -22,8 +22,12 @@
     {% set url = "" %}
 {% endif %}
 
-<div class="default-banner{{ isSlider ? " default-banner_slider" }}{{ command ? ' with-content' }}"
-     {% if not backSlider %}style="background-image: url({{ url }});"{% endif %}>
+<div class="default-banner{{ isSlider ? " default-banner_slider js-banner-slider-big" }}{{ command ? ' with-content' }}"
+     {% if backSlider %}
+style="background-image: url({{ url }});"
+{%  elseif isSlider %}
+    style="background-image: url('./assets/images/catalog-1.png');"
+        {% endif %}>
 
     {% if backSlider %}
         <div class="js-back-slider">
@@ -126,7 +130,7 @@
             {% endif %}
 
             {% if isSlider %}
-                <div class="default-banner__slider js-banner-slider">
+                <div class="default-banner__slider {{ isCatalog ? "default-banner__slider-catalog" }} js-banner-slider">
                     <div class="default-banner__slider-row-nav">
                         <div class="default-banner__controls-wrapper">
                             <button class="default-banner__slider-toggle js-banner-slider-toggle">
@@ -141,10 +145,12 @@
                                 <span>Коллекции</span>
                             </button>
 
-                            <div class="default-banner__active-text">
-                                Фотографии сделаны<br />
-                                в магазине КЕРАМИР
-                            </div>
+                            {% if showText %}
+                                <div class="default-banner__active-text">
+                                    Фотографии сделаны<br />
+                                    в магазине КЕРАМИР
+                                </div>
+                            {% endif %}
                         </div>
 
                         <div class="default-banner__backSlider-controls js-slider-controls">
@@ -167,7 +173,7 @@
                             <div class="js-banner-slider-swiper default-banner__slider-swiper">
                                 <div class="swiper-wrapper">
                                     {% for i in [1,2,3,4,1,2,3,4] %}
-                                        <a href="javascript:void(0);" class="swiper-slide default-banner__slide">
+                                        <a href="javascript:void(0);" data-background="./assets/images/catalog-{{ i }}.png" class="swiper-slide default-banner__slide">
                                             <div class="default-banner__slide-img">
                                                 <img src="./assets/images/catalog-{{ i }}.png" alt="">
                                             </div>

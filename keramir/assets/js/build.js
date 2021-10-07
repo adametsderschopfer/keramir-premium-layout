@@ -1417,6 +1417,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
         if (typeof params.onAfterOpen === 'function') {
           params.onAfterOpen(wrap);
         }
+
+        var menu = document.querySelector('.js-burger--menu');
+
+        if (menu) {
+          menu.classList.remove('active');
+        }
       },
       close: function close() {
         closing = true;
@@ -1456,12 +1462,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 })(window);
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 ;
 
 (function () {
   function selectStyle(wrapper) {
     var parent = wrapper ? wrapper : document;
     var selects = parent.querySelectorAll('.js-select');
+    var changePhoneAnchors = document.querySelectorAll('.js-change-phone-anchor');
 
     if (selects.length) {
       selects.forEach(function (select) {
@@ -1503,6 +1516,24 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
               changeOption.classList.add('selected');
               selected.value = html;
               select.classList.remove('active');
+              var updatedPhone = changeOption.dataset.changePhone;
+
+              if (updatedPhone) {
+                var _iterator = _createForOfIteratorHelper(changePhoneAnchors),
+                    _step;
+
+                try {
+                  for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                    var changePhoneAnchor = _step.value;
+                    changePhoneAnchor.innerText = updatedPhone;
+                    changePhoneAnchor.href = "tel:" + updatedPhone;
+                  }
+                } catch (err) {
+                  _iterator.e(err);
+                } finally {
+                  _iterator.f();
+                }
+              }
             });
           });
         }
@@ -1614,6 +1645,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var _loop = function _loop() {
           var bSlider = _step.value;
           var swiper = bSlider.querySelector('.js-banner-slider-swiper');
+          var bannerSliderBig = bSlider.closest('.js-banner-slider-big');
           var toggle = bSlider.querySelector('.js-banner-slider-toggle');
           var content = bSlider.querySelector('.js-banner-slider-content');
           toggle.addEventListener('click', function () {
@@ -1625,7 +1657,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           });
           new Swiper(swiper, {
             slidesPerView: 'auto',
-            spaceBetween: 15,
             allowTouchMove: false,
             simulateTouch: false,
             touchMoveStopPropagation: true,
@@ -1633,6 +1664,22 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
             navigation: {
               prevEl: ".js-slider-controls .prev",
               nextEl: ".js-slider-controls .next"
+            },
+            on: {
+              slideChange: function slideChange(_ref) {
+                var slides = _ref.slides,
+                    realIndex = _ref.realIndex;
+                var curr = slides[realIndex];
+
+                if (curr.dataset.background) {
+                  bannerSliderBig.style.backgroundImage = "url(".concat(curr.dataset.background, ")");
+                }
+              }
+            },
+            breakpoints: {
+              599: {
+                spaceBetween: 15
+              }
             }
           });
         };

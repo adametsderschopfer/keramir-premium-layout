@@ -48,6 +48,7 @@
 
   @include bp-tablet() {
     margin: 0 auto;
+    padding-right: 0;
   }
 }
 
@@ -172,6 +173,12 @@
   text-align: center;
   font-weight: 300;
   line-height: 1.8rem;
+}
+
+.wf .wf__bottom-socials {
+  @include bp-tablet() {
+    margin-right: 1rem;
+  }
 }
 
 .wf__bottom-socials {

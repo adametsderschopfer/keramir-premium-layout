@@ -2,6 +2,8 @@
   function selectStyle(wrapper) {
     const parent = wrapper ? wrapper : document;
     const selects = parent.querySelectorAll('.js-select');
+    const changePhoneAnchors = document.querySelectorAll('.js-change-phone-anchor');
+
     if (selects.length) {
       selects.forEach(select => {
         const trigger = select.querySelector('.js-select-trigger');
@@ -38,6 +40,15 @@
               changeOption.classList.add('selected');
               selected.value = html;
               select.classList.remove('active');
+
+              const updatedPhone = changeOption.dataset.changePhone;
+
+              if (updatedPhone) {
+                for (const changePhoneAnchor of changePhoneAnchors) {
+                  changePhoneAnchor.innerText = updatedPhone;
+                  changePhoneAnchor.href = "tel:" + updatedPhone;
+                }
+              }
             })
           })
         }

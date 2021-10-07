@@ -28,6 +28,12 @@
         background: linear-gradient(0, #000000 0.1%, rgba(0, 0, 0, 0) 99.9%);
       }
     }
+
+    @include bp-tablet() {
+      height: auto;
+      padding-top: 7rem;
+      padding-bottom: 5.5rem;
+    }
   }
 
   & > * {
@@ -47,6 +53,10 @@
     top: 0;
     left: 0;
     background-color: rgba(#000000, 0.3);
+  }
+
+  @include bp-desktop() {
+    height: 75rem;
   }
 }
 
@@ -202,6 +212,13 @@
   width: 100%;
   left: 0;
 
+  &-catalog {
+    @include bp-tablet() {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
   &.active {
     .default-banner__backSlider-controls {
       span {
@@ -232,6 +249,8 @@
       opacity: 1;
     }
   }
+
+
 }
 
 .default-banner__controls-wrapper {
@@ -328,7 +347,7 @@
     @include bp-tablet() {
       margin-right: 0;
       padding-bottom: 2.5rem;
-      
+
       span {
         background-color: #ffffff;
         border-color: #AEAEAE;
@@ -369,7 +388,7 @@
   background-color: transparent;
   border-top: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
-  
+
   i {
     background-color: #ffffff;
     display: flex;
@@ -378,8 +397,8 @@
   }
 
   &.active {
-    svg {                                                                                 
-        transform: rotate(180deg);
+    svg {
+      transform: rotate(180deg);
     }
   }
 
@@ -395,8 +414,8 @@
   }
 
   svg {
-      transform: rotate(0);
-      transition: 0.2s;
+    transform: rotate(0);
+    transition: 0.2s;
   }
 
   @include bp-tablet() {
@@ -504,6 +523,15 @@
         height: 100%;
         object-fit: cover;
       }
+
+       @include bp-mobile() {
+         min-width: 100vw;
+         width: 100%;
+       }
+    }
+
+    @include bp-mobile() {
+      min-width: 100vw;
     }
   }
 
@@ -658,20 +686,13 @@
 
   @include bp-desktop() {
     bottom: initial;
-    top: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-  }
 
-  @include bp-tabletXS() {
-    top: -10%;
-  }
-
-  @include bp-mobile() {
-    top: -15%;
+    top: -33%;
   }
 }
 

@@ -22,6 +22,20 @@
 .shops__item {
   width: 25%;
 
+  &.no-shop {
+    @include bp-mobile() {
+      margin-bottom: 0;
+
+      .shops__item-img {
+        display: none;
+      }
+
+      .shops__item-text {
+        margin-bottom: 0; 
+      }
+    }
+  }
+
   &.hide {
     .shops__item-img {
       &:after {

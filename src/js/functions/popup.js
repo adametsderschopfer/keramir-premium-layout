@@ -142,9 +142,16 @@
       open() {
         !closing && wrap.classList.add('popup_open')
         setPadding(getScrollBarWidth() + 'px')
-        document.addEventListener('keydown', escClickHandler)
+        document.addEventListener('keydown', escClickHandler);
+
         if (typeof params.onAfterOpen === 'function') {
           params.onAfterOpen(wrap)
+        }
+
+        const menu = document.querySelector('.js-burger--menu');
+
+        if (menu) {
+          menu.classList.remove('active');
         }
       },
       close() {
