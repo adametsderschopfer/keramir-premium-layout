@@ -870,6 +870,43 @@ label span {
       -ms-flex-align: center;
           align-items: center; }
 
+.popup-success {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.popup-success__icon {
+  margin-bottom: 2.5rem; }
+
+.popup-success__title {
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #343434; }
+
+.popup-success__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  color: #343434; }
+
 .button-primary {
   background: none;
   border: 1px solid #ffffff;

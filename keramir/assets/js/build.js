@@ -1973,6 +1973,12 @@ function chunk(arr, len) {
 ;
 
 (function () {
+  window.FormFeedback = window.FormFeedback || {};
+})();
+
+;
+
+(function () {
   function PhoneMaskInit(p) {
     var mask = function mask(_p) {
       Inputmask('+7 (999) 999 99 99').mask(_p);
@@ -2029,6 +2035,14 @@ function chunk(arr, len) {
           onAfterAppend: function onAfterAppend(result) {
             formFeedbackPopup.remove();
             window.PhoneMask.init();
+
+            window.FormFeedback.popupSuccess = function () {
+              var _formLayout = result.querySelector('.form-feedback');
+
+              if (_formLayout) {
+                _formLayout.outerHTML = "\n                                <div class=\"popup-success\">\n                                    <div class=\"popup-success__icon\">\n                                        <svg width=\"101\" height=\"101\" viewBox=\"0 0 101 101\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                                            <path d=\"M50.5 0C22.6543 0 0 22.6543 0 50.5C0 78.3457 22.6543 101 50.5 101C78.3457 101 101 78.3457 101 50.5C101 22.6543 78.3457 0 50.5 0ZM40.4051 72.7857L21.6544 54.0754L28.785 46.9246L40.395 58.5144L67.1297 31.7797L74.2704 38.9203L40.4051 72.7857Z\" fill=\"#6BD689\"/>\n                                        </svg>\n                                    </div>\n                                \n                                    <div class=\"popup-success__title\">\n                                        \u0421\u041F\u0410\u0421\u0418\u0411\u041E!\n                                    </div>\n                                    \n                                    <div class=\"popup-success__text\">\n                                        \u0412\u0430\u0448\u0435 \u0441\u043E\u043E\u0431\u0449\u0435\u043D\u0438\u0435 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E\n                                    </div>\n                                </div>\n                          ";
+              }
+            };
           }
         });
 

@@ -72,6 +72,10 @@ function chunk(arr, len) {
 })();
 
 ;(() => {
+    window.FormFeedback = window.FormFeedback || {}
+})();
+
+;(() => {
     function PhoneMaskInit(p) {
         const mask = (_p) => {
             Inputmask('+7 (999) 999 99 99').mask(_p);
@@ -113,6 +117,30 @@ function chunk(arr, len) {
                onAfterAppend(result) {
                    formFeedbackPopup.remove();
                    window.PhoneMask.init();
+
+                   window.FormFeedback.popupSuccess = function () {
+                       const _formLayout = result.querySelector('.form-feedback');
+
+                       if (_formLayout) {
+                           _formLayout.outerHTML = `
+                                <div class="popup-success">
+                                    <div class="popup-success__icon">
+                                        <svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M50.5 0C22.6543 0 0 22.6543 0 50.5C0 78.3457 22.6543 101 50.5 101C78.3457 101 101 78.3457 101 50.5C101 22.6543 78.3457 0 50.5 0ZM40.4051 72.7857L21.6544 54.0754L28.785 46.9246L40.395 58.5144L67.1297 31.7797L74.2704 38.9203L40.4051 72.7857Z" fill="#6BD689"/>
+                                        </svg>
+                                    </div>
+                                
+                                    <div class="popup-success__title">
+                                        СПАСИБО!
+                                    </div>
+                                    
+                                    <div class="popup-success__text">
+                                        Ваше сообщение отправлено
+                                    </div>
+                                </div>
+                          `
+                       }
+                   }
                }
            });
 
@@ -125,5 +153,4 @@ function chunk(arr, len) {
            }
        }
     });
-
 })();

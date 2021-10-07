@@ -364,3 +364,32 @@ label span {
   display: flex;
   align-items: center;
 }
+
+.popup-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-success__icon {
+  margin-bottom: 2.5rem;
+}
+
+.popup-success__title {
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #343434;
+}
+
+.popup-success__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+  color: #343434;
+}
+
