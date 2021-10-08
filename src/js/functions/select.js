@@ -41,6 +41,28 @@
               selected.value = html;
               select.classList.remove('active');
 
+              if (select.classList.contains('js-city-select')) {
+                const citySelects = document.querySelectorAll('.js-city-select');
+
+                if (citySelects.length) {
+                  for (const citySelect of citySelects) {
+                    const _changeOptions =  citySelect.querySelectorAll('.js-default-checked-change-select');
+                    const _selected = citySelect.querySelector('.js-default-checked-select');
+
+                    _selected.value = html;
+                    citySelect.classList.remove('active');
+
+                    _changeOptions.forEach(function (el) {el.classList.remove('selected')});
+
+                    for (const changeOption1 of _changeOptions) {
+                      if (changeOption1.innerText === changeOption.innerText) {
+                        changeOption1.classList.add('selected');
+                      }
+                    }
+                  }
+                }
+              }
+
               const updatedPhone = changeOption.dataset.changePhone;
 
               if (updatedPhone) {

@@ -25,6 +25,10 @@
   max-width: 1520px;
   margin: auto;
   padding: 0 2rem;
+
+  @include bp-mobile() {
+    display: none;
+  }
 }
 
 .companies__item {
@@ -54,5 +58,30 @@
 
   @include bp-tablet() {
     max-width: 29rem;
+  }
+}
+
+.companies__slider {
+  display: none;
+  
+  @include bp-mobile() {
+    display: flex;
+  }
+}
+
+.companies__slider-wrapper {
+  display: flex;  
+}
+
+.companies__slider-item {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .companies__item {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
