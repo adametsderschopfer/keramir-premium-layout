@@ -1516,22 +1516,70 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
               changeOption.classList.add('selected');
               selected.value = html;
               select.classList.remove('active');
+
+              if (select.classList.contains('js-city-select')) {
+                var citySelects = document.querySelectorAll('.js-city-select');
+
+                if (citySelects.length) {
+                  var _iterator = _createForOfIteratorHelper(citySelects),
+                      _step;
+
+                  try {
+                    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                      var citySelect = _step.value;
+
+                      var _changeOptions = citySelect.querySelectorAll('.js-default-checked-change-select');
+
+                      var _selected = citySelect.querySelector('.js-default-checked-select');
+
+                      _selected.value = html;
+                      citySelect.classList.remove('active');
+
+                      _changeOptions.forEach(function (el) {
+                        el.classList.remove('selected');
+                      });
+
+                      var _iterator2 = _createForOfIteratorHelper(_changeOptions),
+                          _step2;
+
+                      try {
+                        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                          var changeOption1 = _step2.value;
+
+                          if (changeOption1.innerText === changeOption.innerText) {
+                            changeOption1.classList.add('selected');
+                          }
+                        }
+                      } catch (err) {
+                        _iterator2.e(err);
+                      } finally {
+                        _iterator2.f();
+                      }
+                    }
+                  } catch (err) {
+                    _iterator.e(err);
+                  } finally {
+                    _iterator.f();
+                  }
+                }
+              }
+
               var updatedPhone = changeOption.dataset.changePhone;
 
               if (updatedPhone) {
-                var _iterator = _createForOfIteratorHelper(changePhoneAnchors),
-                    _step;
+                var _iterator3 = _createForOfIteratorHelper(changePhoneAnchors),
+                    _step3;
 
                 try {
-                  for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                    var changePhoneAnchor = _step.value;
+                  for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                    var changePhoneAnchor = _step3.value;
                     changePhoneAnchor.innerText = updatedPhone;
                     changePhoneAnchor.href = "tel:" + updatedPhone;
                   }
                 } catch (err) {
-                  _iterator.e(err);
+                  _iterator3.e(err);
                 } finally {
-                  _iterator.f();
+                  _iterator3.f();
                 }
               }
             });
@@ -1666,9 +1714,35 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
               nextEl: ".js-slider-controls .next"
             },
             on: {
-              slideChange: function slideChange(_ref) {
+              init: function init(_ref) {
                 var slides = _ref.slides,
                     realIndex = _ref.realIndex;
+
+                var _iterator2 = _createForOfIteratorHelper(slides),
+                    _step2;
+
+                try {
+                  var _loop2 = function _loop2() {
+                    var slide = _step2.value;
+                    slide.addEventListener('click', function () {
+                      if (slide.dataset.background) {
+                        bannerSliderBig.style.backgroundImage = "url(".concat(slide.dataset.background, ")");
+                      }
+                    });
+                  };
+
+                  for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                    _loop2();
+                  }
+                } catch (err) {
+                  _iterator2.e(err);
+                } finally {
+                  _iterator2.f();
+                }
+              },
+              slideChange: function slideChange(_ref2) {
+                var slides = _ref2.slides,
+                    realIndex = _ref2.realIndex;
                 var curr = slides[realIndex];
 
                 if (curr.dataset.background) {
@@ -1718,24 +1792,85 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 })();
 "use strict";
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 ;
 
 (function () {
-  document.addEventListener('DOMContentLoaded', function () {
-    var slider = document.querySelector('.js-companies-slider');
+  window.addEventListener('load', function () {
+    var companies = document.querySelector('.companies');
 
-    if (slider) {
-      new Swiper(slider, {
-        slidesPerView: "auto",
-        autoplay: {
-          delay: 2000
-        },
-        loop: true,
-        navigation: {
-          prevEl: '.js-companies-slider-prev',
-          nextEl: '.js-companies-slider-next'
-        }
-      });
+    if (companies) {
+      var items = Array.from(companies.querySelectorAll('.companies__item'));
+
+      if (items) {
+        var renderItems = function renderItems() {
+          var els = [];
+          items = items.reduce(function (previousValue, currentValue) {
+            var chunk;
+
+            if (previousValue.length === 0 || previousValue[previousValue.length - 1].length === 2) {
+              chunk = [];
+              previousValue.push(chunk);
+            } else {
+              chunk = previousValue[previousValue.length - 1];
+            }
+
+            chunk.push(currentValue);
+            return previousValue;
+          }, []);
+
+          var _iterator = _createForOfIteratorHelper(items),
+              _step;
+
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var item = _step.value;
+              var el = document.createElement('div');
+              el.classList.add('companies__slider-item');
+              el.classList.add('swiper-slide');
+
+              var _iterator2 = _createForOfIteratorHelper(item),
+                  _step2;
+
+              try {
+                for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                  var elItem = _step2.value;
+                  el.appendChild(elItem.cloneNode(true));
+                }
+              } catch (err) {
+                _iterator2.e(err);
+              } finally {
+                _iterator2.f();
+              }
+
+              els.push(el);
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+
+          return els.map(function (i) {
+            return i.outerHTML;
+          });
+        };
+
+        var slider = document.createElement('div');
+        slider.classList.add('companies__slider');
+        slider.innerHTML = "\n                    <div class=\"companies__slider-wrapper swiper-wrapper\">\n                        ".concat(renderItems().join(''), "\n                    </div>            \n                \n               ");
+        companies.appendChild(slider);
+        queueMicrotask(function () {
+          new Swiper(slider, {
+            slidesPerView: 'auto'
+          });
+        });
+      }
     }
   });
 })();

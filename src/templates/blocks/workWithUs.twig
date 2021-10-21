@@ -8,36 +8,38 @@
         </div>
     </div>
 
-    <div class="wwu__blocks">
-        {% for i in [[1,2,3], [1,2,3], [1,2,3]] %}
-            <ul class="wwu__blocks-list">
-                {% for j in i %}
-                    <li class="wwu__blocks-list-item {{ j == 1 ? "wwu__blocks-list-item-no-text" }}">
-                        {% if j != 1 %}
-                            <div class="wwu__blocks-list-item-img">
-                                <img src="./assets/images/us.png" alt="">
-                            </div>
-                        {% endif %}
+    <div class="wwu__blocks--scroll">
+        <div class="wwu__blocks">
+            {% for i in [[1,2,3], [1,2,3], [1,2,3]] %}
+                <ul class="wwu__blocks-list">
+                    {% for j in i %}
+                        <li class="wwu__blocks-list-item {{ j == 1 ? "wwu__blocks-list-item-no-text" }}">
+                            {% if j != 1 %}
+                                <div class="wwu__blocks-list-item-img">
+                                    <img src="./assets/images/us.png" alt="">
+                                </div>
+                            {% endif %}
 
-                        <div class="wwu__blocks-list-item-text">
-                            <div class="wwu__blocks-list-item__title">
-                                {% if j == 1 %}
-                                    Успех обычно приходит к тем, кто слишком занят, чтобы его просто ждать
-                                {% else %}
-                                    <b>Фамилия</b> Имя
-                                {% endif %}
+                            <div class="wwu__blocks-list-item-text">
+                                <div class="wwu__blocks-list-item__title">
+                                    {% if j == 1 %}
+                                        Успех обычно приходит к тем, кто слишком занят, чтобы его просто ждать
+                                    {% else %}
+                                        <b>Фамилия</b> Имя
+                                    {% endif %}
+                                </div>
+                                <div class="wwu__blocks-list-item__desc">
+                                    {% if j == 1 %}
+                                        Henry David Thoreau
+                                    {% else %}
+                                        Специализация стажя
+                                    {% endif %}
+                                </div>
                             </div>
-                            <div class="wwu__blocks-list-item__desc">
-                                {% if j == 1 %}
-                                    Henry David Thoreau
-                                {% else %}
-                                    Специализация стажя
-                                {% endif %}
-                            </div>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endfor %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
     </div>
 </div>

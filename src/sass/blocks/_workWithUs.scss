@@ -38,18 +38,29 @@
   max-width: 76rem;
 }
 
+.wwu__blocks--scroll {
+  overflow-y: hidden;
+  overflow-x: auto;
+  max-width: 100vw;
+  display: flex;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .wwu__blocks {
   display: flex;
 
   @include bp-desktop() {
     justify-content: center;
-    padding-bottom: 7rem;
   }
 }
 
 .wwu__blocks-list {
   display: grid;
-  grid-template-columns: repeat(3, calc(100vw / 8));
+  grid-template-columns: repeat(3, calc(1920px / 8));
   grid-template-rows: repeat(2, 24rem);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -67,15 +78,15 @@
       &:nth-child(3) {
         grid-area: 1 / 2 / 3 / 3;
 
-        @include bp-tablet() {
-          display: none;
-        }
+        //@include bp-tablet() {
+        //  display: none;
+        //}
       }
     }
   }
 
   &:nth-child(2) {
-    grid-template-columns: repeat(2, calc(100vw / 8));
+    grid-template-columns: repeat(2, calc(1920px / 8));
     grid-template-rows: repeat(2, 24rem);
                           
     .wwu__blocks-list-item {
@@ -92,9 +103,9 @@
       }
     }
 
-    @include bp-desktop() {
-      display: none;
-    }
+    //@include bp-desktop() {
+    //  display: none;
+    //}
   }
   
   &:nth-child(3) {
@@ -111,15 +122,15 @@
         grid-area: 3 / 2 / 1 / 1;
       }
     }
-
-    @include bp-tablet() {
-      display: none;
-    }
+    //
+    //@include bp-tablet() {
+    //  display: none;
+    //}
   }
 
-  @include bp-tablet() {
-    grid-template-columns: repeat(1, calc(100vw - 8rem));
-  }
+  //@include bp-tablet() {
+  //  grid-template-columns: repeat(1, calc(1920px - 8rem));
+  //}
 }
 
 .wwu__blocks-list-item {
@@ -141,25 +152,25 @@
   }
 
   &:nth-child(1) {
-    min-width: calc(100vw / 8);
+    min-width: calc(1920px / 8);
     max-width: 24rem;
 
-    @include bp-tablet() {
-      min-width: calc(100vw - 8rem);
-    }
+    //@include bp-tablet() {
+    //  min-width: calc(1920px - 8rem);
+    //}
   }
 
   &:nth-child(2) {
-    min-width: calc(100vw / 8);
+    min-width: calc(1920px / 8);
     max-width: 24rem;
 
-    @include bp-tablet() {
-      min-width: calc(100vw - 8rem);
-    }
+    //@include bp-tablet() {
+    //  min-width: calc(1920px - 8rem);
+    //}
   }
 
   &:nth-child(3) {
-    min-width: calc(100vw / 4);
+    min-width: calc(1920px / 4);
     max-width: 48rem;
   }
 
