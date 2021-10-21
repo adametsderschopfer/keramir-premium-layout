@@ -22,6 +22,7 @@
   text-decoration: none !important;
   overflow: hidden;
   max-width: calc(33.333% - 3rem);
+  width: 100%;
 
   &.catalog_last {
     margin-right: auto;
@@ -88,6 +89,7 @@
   color: #ffffff;
   padding: 3.2rem 5rem;
   transition: 0.2s;
+  width: 100%;
 }
 
 .catalog__item-name {
@@ -103,8 +105,9 @@
 .catalog__item-text {
   height: 0;
   overflow: hidden;
-  font-size: 2.4rem;
-  line-height: 2.5rem;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+  font-weight: 400;
   color: #ffffff;
 
   @include bp-tablet() {

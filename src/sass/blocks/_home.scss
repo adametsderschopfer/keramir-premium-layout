@@ -1,5 +1,6 @@
 .home__indent {
-  margin-bottom: 16rem;
+  margin-top: -16rem;
+  padding-top: 32rem;
   overflow: hidden;
 
   @include bp-tablet() {

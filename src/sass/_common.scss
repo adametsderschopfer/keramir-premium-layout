@@ -46,13 +46,14 @@ body {
 }
 
 .block-title {
-  margin-bottom: 4rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
   text-align: center;
   color: #343434;
+  max-width: 1440px;
+  margin: 0 auto 4rem;
 
   &.uppercase {
     text-transform: uppercase;

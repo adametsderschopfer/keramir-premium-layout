@@ -29,6 +29,15 @@
                         nextEl: ".js-slider-controls .next"
                     },
                     on: {
+                        init({slides, realIndex}) {
+                            for (const slide of slides) {
+                                slide.addEventListener('click', function () {
+                                    if (slide.dataset.background) {
+                                        bannerSliderBig.style.backgroundImage = `url(${slide.dataset.background})`;
+                                    } 
+                                });
+                            }
+                        },
                         slideChange({slides, realIndex}) {
                             const curr = slides[realIndex];
                             if (curr.dataset.background) {
