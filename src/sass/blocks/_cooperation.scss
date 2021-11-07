@@ -99,6 +99,10 @@
     margin-right: 1rem;
   }
 
+  span {
+    white-space: nowrap;
+  }
+
   @include bp-tablet() {
     font-size: 1.8rem;
     

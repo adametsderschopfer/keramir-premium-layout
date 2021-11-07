@@ -25,7 +25,7 @@
 <div class="default-banner{{ isSlider ? " default-banner_slider js-banner-slider-big" }}{{ command ? ' with-content' }}"
      {% if backSlider %}
 style="background-image: url({{ url }});"
-{%  elseif isSlider %}
+{%  elseif isSlider or showBg %}
     style="background-image: url('./assets/images/catalog-1.png');"
         {% endif %}>
 
